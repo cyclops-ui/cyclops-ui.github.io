@@ -51,14 +51,12 @@ Once you have your application up and running, you will eventually want to make 
 that easily through the same form you edited when deploying it for the first time. Once you think you are ready with a
 new version hit OK and watch your change rollout.
 
-
-
 And finally, you might want to delete a deployment. Feel free to do it through Cyclops.
+
+https://user-images.githubusercontent.com/72022639/220197886-5766dece-db82-424e-9350-47c6fe594b13.mov
 
 # Open questions
 
-* Initial version supporting only deployments observability
-* Better handling of cyclops annotations
+* Initial version supporting only Kubernetes native reosources observability
 * Error handling
 * Customizable details page
-* Kubernetes CRD enabling you to group whichever resources you want https://github.com/petar-cvit/cyclops/blob/main/install/cyclops-module.yaml
