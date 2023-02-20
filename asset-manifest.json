@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cyclops-ui.github.io/static/css/main.63777f1c.css",
+    "main.js": "/cyclops-ui.github.io/static/js/main.e03f6ca0.js",
+    "index.html": "/cyclops-ui.github.io/index.html",
+    "main.63777f1c.css.map": "/cyclops-ui.github.io/static/css/main.63777f1c.css.map",
+    "main.e03f6ca0.js.map": "/cyclops-ui.github.io/static/js/main.e03f6ca0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63777f1c.css",
+    "static/js/main.e03f6ca0.js"
+  ]
+}
