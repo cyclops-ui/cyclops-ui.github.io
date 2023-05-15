@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 import configurable from '/static/img/configuration.png';
 import unify from '/static/img/unification.png';
 import simple from '/static/img/simple.png';
+import config from "@generated/docusaurus.config";
 
 const FeatureList = [
   {
@@ -52,7 +53,7 @@ function Feature({svg, title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{ backgroundColor: '#fe8801'}}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (

@@ -4,10 +4,11 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  left: 50%;
+  align-content: center;
+  align-items: center;
+  alignment: center;
+  background: white;
 }
 
 @media screen and (max-width: 996px) {
@@ -19,5 +20,10 @@
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+}
+
+.right {
+  float: right;
+  width: 60%;
 }
