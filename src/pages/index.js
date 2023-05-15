@@ -11,9 +11,6 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
-    const all = {
-        background: "white",
-    };
 
     const letters = {
         "text-align": "left",
@@ -22,12 +19,12 @@ function HomepageHeader() {
         background: "white",
         color: "#00152A",
         float: "right",
-        width: "20%",
+        width: "30%",
         margin: "0",
     };
     const image = {
         float: "right",
-        width: "30%",
+        width: "35%",
     };
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>

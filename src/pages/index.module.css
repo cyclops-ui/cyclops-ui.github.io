@@ -3,6 +3,13 @@
  * and scoped locally.
  */
 
+@media screen and (max-width: 950px) {
+  .heroBanner {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 .heroBanner {
   left: 50%;
   align-content: center;
@@ -23,6 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: left;
+  width: 100%;
 }
 
 .right {
