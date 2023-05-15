@@ -9,6 +9,8 @@
   align-items: center;
   alignment: center;
   background: white;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 996px) {

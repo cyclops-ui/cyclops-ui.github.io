@@ -22,7 +22,7 @@ function HomepageHeader() {
         background: "white",
         color: "#00152A",
         float: "right",
-        width: "40%",
+        width: "20%",
         margin: "0",
     };
     const image = {
@@ -39,7 +39,7 @@ function HomepageHeader() {
                     <Link
                         className="button button--secondary button--lg"
                         to="/docs/installation/prerequisites">
-                        Deploy your first Cyclops module
+                        Check it out
                     </Link>
                 </div>
             </div>
