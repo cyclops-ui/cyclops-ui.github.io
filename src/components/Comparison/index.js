@@ -112,22 +112,14 @@ class Comparison extends React.Component {
 
         return (
             <div className={styles.all}>
-                <div className={styles.yaml}>
-                    <CodeBlock
-                        language={'yaml'}
-                        showLineNumbers={true}
-                    >
-                        {getManifest()}
-                    </CodeBlock>
-                </div>
                 <div className={styles.ui}>
-                    <h1 className="hero__title">Simple deployment</h1>
+                    <h1 className="hero__title uiText">Simple deployment</h1>
                     <p className="hero__subtitle">Cyclops gives you a UI containing fields you define yourself to manage your
                         K8s workloads</p>
-                    <Form labelAlign={"left"}>
+                    <Form labelCol={{span: '6'}}>
                         <Form.Item
                             label="Name"
-                            style={{display: 'block'}}
+                            style={{ flexDirection: 'row' }}
                         >
                             <Input defaultValue={'nginx'} onChange={onNameChange}/>
                         </Form.Item>
@@ -135,7 +127,7 @@ class Comparison extends React.Component {
                             label="Replicas"
                             style={{display: 'block'}}
                         >
-                            <InputNumber defaultValue={'3'} onChange={onReplicasChange}/>
+                            <InputNumber style={{width: '100%'}} defaultValue={'3'} onChange={onReplicasChange}/>
                         </Form.Item>
                         <Form.Item
                             label="Version"
@@ -147,15 +139,23 @@ class Comparison extends React.Component {
                             label="Port"
                             style={{display: 'block'}}
                         >
-                            <InputNumber defaultValue={'80'} onChange={onPortChange}/>
+                            <InputNumber style={{width: '100%'}} defaultValue={'80'} onChange={onPortChange}/>
                         </Form.Item>
                         <Form.Item
                             label="Need service"
-                            style={{display: 'block'}}
+                            style={{display: 'block', textAlign: 'left'}}
                         >
                             <Switch defaultValue={'false'} onChange={onNeedService}/>
                         </Form.Item>
                     </Form>
+                </div>
+                <div className={styles.yaml}>
+                    <CodeBlock
+                        language={'yaml'}
+                        showLineNumbers={true}
+                    >
+                        {getManifest()}
+                    </CodeBlock>
                 </div>
             </div>
         );

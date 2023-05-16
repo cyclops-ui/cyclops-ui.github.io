@@ -30,7 +30,7 @@ function HomepageHeader() {
                 <div className={styles.support}>
                     <p style={{padding: 0, margin: 0}}>Supported by</p>
                     <Link to="https://nuqleus.io/">
-                        <img src={nuqleus} />
+                        <img src={nuqleus}/>
                     </Link>
                 </div>
             </div>
@@ -44,10 +44,10 @@ export default function Home() {
         <Layout
             title={`Hello from ${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
-            <HomepageHeader />
+            <HomepageHeader/>
             <main>
-                <HomepageFeatures />
-                <Comparison />
+                <HomepageFeatures/>
+                <Comparison/>
             </main>
         </Layout>
     );
