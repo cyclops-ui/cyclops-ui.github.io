@@ -9,6 +9,7 @@ import helmsman from '/static/img/cyclops_helmsman.png';
 import nuqleus from '/static/img/nuqleus_logo.png';
 
 import styles from './index.module.css';
+import Comparison from "../components/Comparison";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
@@ -46,6 +47,7 @@ export default function Home() {
             <HomepageHeader />
             <main>
                 <HomepageFeatures />
+                <Comparison />
             </main>
         </Layout>
     );
