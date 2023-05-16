@@ -12,24 +12,10 @@ import styles from './index.module.css';
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
 
-    const letters = {
-        "text-align": "left",
-        position: "relative",
-        overflow: "hidden",
-        background: "white",
-        color: "#00152A",
-        float: "right",
-        width: "30%",
-        margin: "0",
-    };
-    const image = {
-        float: "right",
-        width: "35%",
-    };
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
-            <img src={helmsman} style={image}/>
-            <div className="container" style={letters}>
+            <img src={helmsman} className={styles.image}/>
+            <div className={styles.letters}>
                 <h1 className="hero__title">{siteConfig.title}</h1>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
                 <div className={styles.buttons}>

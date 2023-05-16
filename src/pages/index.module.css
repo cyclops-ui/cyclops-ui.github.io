@@ -20,10 +20,20 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.image {
+  float: right;
+  width: 35%;
+}
+
+.letters {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: #00152A;
+  float: right;
+  width: 30%;
+  margin: 0;
 }
 
 .buttons {
@@ -31,6 +41,37 @@
   align-items: center;
   justify-content: left;
   width: 100%;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    /*padding: 2rem;*/
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image {
+    float: right;
+    width: 100%;
+  }
+
+  .letters {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    color: #00152A;
+    width: 100%;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .right {
