@@ -25,8 +25,8 @@ const sidebars = {
       label: 'About',
       items: [
         'about/about',
-        'about/comparison',
-        'about/implementation'
+        // 'about/comparison',
+        // 'about/implementation'
       ],
     },
     {
