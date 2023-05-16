@@ -113,9 +113,10 @@ class Comparison extends React.Component {
         return (
             <div className={styles.all}>
                 <div className={styles.ui}>
-                    <h1 className="hero__title uiText">Simple deployment</h1>
+                    <h1 className="hero__title uiText">Deploying made easy</h1>
                     <p className="hero__subtitle">Cyclops gives you a UI containing fields you define yourself to manage your
-                        K8s workloads</p>
+                        K8s workloads.</p>
+                    <p className="hero__subtitle">Give it a go!</p>
                     <Form labelCol={{span: '6'}}>
                         <Form.Item
                             label="Name"
