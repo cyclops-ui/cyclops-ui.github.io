@@ -33,7 +33,8 @@
   color: #00152A;
   float: right;
   width: 30%;
-  margin: 0;
+  margin: 5px;
+  padding: 15px;
 }
 
 .buttons {
