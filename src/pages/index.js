@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import helmsman from '/static/img/cyclops_helmsman.png';
+import nuqleus from '/static/img/nuqleus_logo.png';
 
 import styles from './index.module.css';
 
@@ -23,6 +24,12 @@ function HomepageHeader() {
                         className="button button--secondary button--lg"
                         to="/docs/installation/prerequisites">
                         Check it out
+                    </Link>
+                </div>
+                <div className={styles.support}>
+                    <p style={{padding: 0, margin: 0}}>Supported by</p>
+                    <Link to="https://nuqleus.io/">
+                        <img src={nuqleus} />
                     </Link>
                 </div>
             </div>

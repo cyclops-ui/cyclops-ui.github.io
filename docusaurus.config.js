@@ -120,7 +120,6 @@ const config = {
             ],
           },
         ],
-        copyright: `Backed by`,
       },
       prism: {
         theme: lightCodeTheme,
