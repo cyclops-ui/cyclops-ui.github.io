@@ -40,6 +40,10 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
+        gtag: {
+          trackingID: 'G-MNT2DFSGCM',
+          anonymizeIP: true,
+        },
         blog: {
           showReadingTime: true,
         },
