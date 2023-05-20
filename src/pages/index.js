@@ -42,7 +42,7 @@ export default function Home() {
     return (
         <Layout
             title={`Developer friendly Kubernetes`}
-            description="Developer friendly Kubernetes">
+            description="Deploy your K8s workloads through a UI">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
