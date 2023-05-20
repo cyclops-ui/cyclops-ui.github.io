@@ -49,10 +49,6 @@ export default function Home() {
         <Layout
             title={`Developer firendly Kubernetes`}
             description="Description will go into a meta tag in <head />">
-            <head>
-                <script>
-                </script>
-            </head>
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
