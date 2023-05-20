@@ -5,8 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import ReactGA from 'react-ga';
-
 import helmsman from '/static/img/cyclops_helmsman.png';
 import nuqleus from '/static/img/nuqleus_logo.png';
 
@@ -41,17 +39,10 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-    const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            title={`Developer firendly Kubernetes`}
-            description="Description will go into a meta tag in <head />">
-            <BrowserOnly fallback={<div>Loading...</div>}>
-                {() => {
-                    ReactGA.initialize('G-MNT2DFSGCM');
-                    ReactGA.pageview(window.location.pathname + window.location.search);
-                }}
-            </BrowserOnly>
+            title={`Developer friendly Kubernetes`}
+            description="Developer friendly Kubernetes">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
