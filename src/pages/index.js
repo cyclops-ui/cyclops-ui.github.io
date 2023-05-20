@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
+import ReactGA from 'react-ga';
+
 import helmsman from '/static/img/cyclops_helmsman.png';
 import nuqleus from '/static/img/nuqleus_logo.png';
 
@@ -13,6 +15,9 @@ import Comparison from "../components/Comparison";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
+
+    ReactGA.initialize('G-MNT2DFSGCM');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -44,6 +49,10 @@ export default function Home() {
         <Layout
             title={`Developer firendly Kubernetes`}
             description="Description will go into a meta tag in <head />">
+            <head>
+                <script>
+                </script>
+            </head>
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
