@@ -16,9 +16,6 @@ import Comparison from "../components/Comparison";
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
 
-    ReactGA.initialize('G-MNT2DFSGCM');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <img src={helmsman} className={styles.image}/>
@@ -49,6 +46,12 @@ export default function Home() {
         <Layout
             title={`Developer firendly Kubernetes`}
             description="Description will go into a meta tag in <head />">
+            <BrowserOnly fallback={<div>Loading...</div>}>
+                {() => {
+                    ReactGA.initialize('G-MNT2DFSGCM');
+                    ReactGA.pageview(window.location.pathname + window.location.search);
+                }}
+            </BrowserOnly>
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
