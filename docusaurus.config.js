@@ -127,7 +127,7 @@ const config = {
             title: 'Contact',
             items: [
               {
-                label: 'info@cyclops-ui.com'
+                html: 'info@cyclops-ui.com',
               }
             ]
           }
