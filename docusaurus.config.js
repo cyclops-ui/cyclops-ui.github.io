@@ -123,6 +123,14 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Contact',
+            items: [
+              {
+                label: 'info@cyclops-ui.com'
+              }
+            ]
+          }
         ],
       },
       prism: {
