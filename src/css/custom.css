@@ -20,3 +20,8 @@ html[data-theme='light'] footer {
   --ifm-color-primary: #FE8801;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.button.button--demo {
+  background-color: #fe8801;
+  color: #FFF;
+}

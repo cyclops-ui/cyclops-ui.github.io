@@ -40,8 +40,10 @@
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: left;
   width: 100%;
+  justify-content: left;
+  padding-right: 0;
+  margin-right: 0;
 }
 
 .support {

@@ -10,6 +10,7 @@ import nuqleus from '/static/img/nuqleus_logo.png';
 
 import styles from './index.module.css';
 import Comparison from "../components/Comparison";
+import {Button} from "antd";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
@@ -18,13 +19,20 @@ function HomepageHeader() {
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <img src={helmsman} className={styles.image}/>
             <div className={styles.letters}>
-                <h1 className="hero__title">{siteConfig.title}</h1>
+                <h1 className="hero__title" style={{marginBottom: 0}}>{siteConfig.title}</h1>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
-                <div className={styles.buttons}>
+                <div style={{paddingTop: '10px', color: '#fe8801'}} >
+                    <Link
+                        className="demo button button--secondary button--lg button--demo"
+                        to="https://docs.google.com/forms/d/e/1FAIpQLSfm9sSsmqJYsofteSrGigWMW9eOgSjoinHwjsvtjX6wOcAv9w/viewform">
+                        Schedule a demo
+                    </Link>
+                </div>
+                <div className={styles.buttons} style={{paddingTop: '10px', color: 'red!important'}}>
                     <Link
                         className="button button--secondary button--lg"
                         to="/docs/about">
-                        Check it out
+                        Read the docs
                     </Link>
                 </div>
                 <div className={styles.support}>

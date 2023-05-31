@@ -121,6 +121,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/cyclops-ui',
               },
+              {
+                label: 'Schedule a demo',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSfm9sSsmqJYsofteSrGigWMW9eOgSjoinHwjsvtjX6wOcAv9w/viewform',
+              }
             ],
           },
           {
