@@ -25,3 +25,7 @@ html[data-theme='light'] footer {
   background-color: #fe8801;
   color: #FFF;
 }
+
+.button.button--demo:hover {
+  background-color: #e37a00;
+}
