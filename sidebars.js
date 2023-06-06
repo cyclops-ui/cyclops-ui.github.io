@@ -40,7 +40,7 @@ const sidebars = {
       items: [
         'installation/prerequisites',
         'installation/install',
-        'installation/verify',
+        'installation/demo',
       ],
     },
     {
