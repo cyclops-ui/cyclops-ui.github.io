@@ -15,6 +15,8 @@ engaging and insightful showcase of Cyclops and other startups participating in 
 customer, investor, or simply curious about our journey, Demo Day promises to be an unforgettable experience that will 
 leave you inspired and amazed.
 
+LinkedIn: https://www.linkedin.com/events/nuqleusdemoday7070038531909328896/
+
 ### Contact us
 If you have the knowledge or resources to help in contributing to Cyclops, contact us at info@cyclops-ui.com
 
