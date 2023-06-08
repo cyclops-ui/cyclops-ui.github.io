@@ -23,11 +23,10 @@ kubectl get namespaces
 Output should be something like this:
 
 ```
-NAME                   STATUS   AGE
-default                Active   10m
-kube-node-lease        Active   10m
-kube-public            Active   10m
-kube-system            Active   10m
-kubernetes-dashboard   Active   10m
+NAME              STATUS   AGE
+default           Active   10m
+kube-node-lease   Active   10m
+kube-public       Active   10m
+kube-system       Active   10m
 ...
 ```

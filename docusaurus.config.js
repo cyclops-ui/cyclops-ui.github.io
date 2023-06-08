@@ -131,6 +131,10 @@ const config = {
             title: 'Contact',
             items: [
               {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/cyclops-ui/',
+              },
+              {
                 html: 'info@cyclops-ui.com',
               }
             ]
