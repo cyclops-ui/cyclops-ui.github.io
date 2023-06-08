@@ -44,41 +44,6 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
-      label: 'User Guide',
-      items: [
-        {
-          type: 'category',
-          label: 'Modules',
-          link: {
-            type: 'doc',
-            id: 'user-guide/modules/about'
-          },
-          items: [
-            'user-guide/modules/create',
-            'user-guide/modules/edit',
-            'user-guide/modules/migrate',
-            'user-guide/modules/delete',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Templates',
-          link: {
-            type: 'doc',
-            id: 'user-guide/templates/about'
-          },
-          items: [
-            'user-guide/templates/origins',
-            'user-guide/templates/create',
-            'user-guide/templates/edit',
-            'user-guide/templates/delete',
-            'user-guide/templates/propagate',
-          ],
-        },
-      ],
-    },
-    {
       label: 'Roadmap',
       id: 'roadmap/roadmap',
       type: 'doc',
