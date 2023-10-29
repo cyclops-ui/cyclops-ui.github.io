@@ -4,7 +4,7 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Oct 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Welcome]]></title>
             <link>https://cyclops-ui.github.io/blog/welcome</link>
             <guid>https://cyclops-ui.github.io/blog/welcome</guid>
-            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+            <pubDate>Sun, 29 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Hi all!]]></description>
             <content:encoded><![CDATA[<p>Hi all!</p><p>We are launching a blog post series on topics relevant to people following our startup journey. From technical topics
 like building high availability apps in Kubernetes to nontechnical ones, like our experience in some of the accelerators
