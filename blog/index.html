@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNT2DFSGCM"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-MNT2DFSGCM",{anonymize_ip:!0})</script><link rel="stylesheet" href="/assets/css/styles.2c350023.css">
-<script src="/assets/js/runtime~main.62143f0b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4610d2e6.js" defer="defer"></script>
 <script src="/assets/js/main.7904da7d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -27,12 +27,12 @@
 </blockquote>
 <ul>
 <li><code>Chart.yaml</code> - A YAML file containing information about the chart (like name, version…)</li>
-<li><code>templates</code> - A directory of templates that, when combined with values, will generate valid Kubernetes manifest files.</li>
+<li><code>templates</code> - A directory of templates that, when combined with values, will generate valid Kubernetes manifest files</li>
 <li><code>values.yaml</code> - The default configuration values for this chart</li>
 <li><code>values.schema.json</code> - A JSON Schema for imposing a structure on the <code>values.yaml</code> file</li>
 </ul>
 <p>When using Helm, you can change your <code>values.yaml</code> however you see fit for your application. The problem is that you can change them <strong>however</strong> you like, which allows you to misconfigure some parts of your application because you misspelled a field or messed up indentation in the <code>values.yaml</code>.</p>
-<p>Here is where JSON schema from the <code>values.schema.json</code> comes in. It is represented as a <a href="https://json-schema.org" target="_blank" rel="noopener noreferrer">JSON schema</a>. It will define which fields you should set and even to which values (e.g., you can specify that a field called replicas can’t be set to lower than 0). Helm won’t let you render a Kubernetes manifest with values that don’t comply with the schema. There is an example of such schema later in the blog, but you can also check it out on <a href="https://helm.sh/docs/topics/charts/#schema-files" target="_blank" rel="noopener noreferrer">Helms official docs</a></p>
+<p>Here is where <a href="https://json-schema.org" target="_blank" rel="noopener noreferrer">JSON schema</a> from the <code>values.schema.json</code> comes in. It will define which fields you should set and even to which values (e.g., you can specify that a field called replicas can’t be set to lower than 0). Helm won’t let you render a Kubernetes manifest with values that don’t comply with the schema. There is an example of such schema later in the blog, but you can also check it out on <a href="https://helm.sh/docs/topics/charts/#schema-files" target="_blank" rel="noopener noreferrer">Helms official docs</a></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="helm-values-schema-and-cyclops-ui">Helm values schema and Cyclops UI<a href="#helm-values-schema-and-cyclops-ui" class="hash-link" aria-label="Direct link to Helm values schema and Cyclops UI" title="Direct link to Helm values schema and Cyclops UI">​</a></h2>
 <p>Now that the schema&#x27;s purpose in a Helm chart is explained let’s get into how Cyclops uses it.</p>
 <p>Since the primary purpose of the values schema is to describe what the Helm chart needs to render all the Kubernetes resources, we naturally decided to use it for rendering the UI. On the first iterations of Cyclops, we implemented a solution where users can define those fields in the UI, but why reinvent the wheel when Helm already provided a way to specify this?</p>
