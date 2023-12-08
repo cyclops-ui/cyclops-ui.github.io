@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcyclops_ui_docs=self.webpackChunkcyclops_ui_docs||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"How Cyclops utilizes JSON schema to deliver dynamical UI","permalink":"/blog/2023/11/13/JSON-schemas","unlisted":false},{"title":"Welcome","permalink":"/blog/welcome","unlisted":false}]}')}}]);
