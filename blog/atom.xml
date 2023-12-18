@@ -2,11 +2,99 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cyclops-ui.github.io/blog</id>
     <title>Cyclops Blog</title>
-    <updated>2023-12-08T00:00:00.000Z</updated>
+    <updated>2023-12-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cyclops-ui.github.io/blog"/>
     <subtitle>Cyclops Blog</subtitle>
     <icon>https://cyclops-ui.github.io/img/logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Complexity by Simplicity - A Deep Dive Into Kubernetes Components]]></title>
+        <id>https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components</id>
+        <link href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components"/>
+        <updated>2023-12-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Image of a Kubernetes cluster based on an image found on https://kubernetes.io/docs/concepts/overview/components/]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="Image of a Kubernetes cluster based on an image found on https://kubernetes.io/docs/concepts/overview/components/" src="https://cyclops-ui.github.io/assets/images/k8s_cluster-8acab5a1ab30bdbdd62ff04fe5a4a19c.png" width="10475" height="5618" class="img_ev3q"></p>
+<p>A couple of days ago, I held a talk about Kubernetes and its components at the college I used to go to. My mom said she liked the talk, so I turned it into a blog post.</p>
+<p>Many software engineers tend to look away from anything related to Kubernetes, even though they might use it daily. At first glance, it seems complex and like a whole new world to dive into. And yeah, it is, but in this blog post, I will go over all of the main components of a Kubernetes cluster and explain what they do in an example.</p>
+<p>By the end of the blog post, you won't be a Kubernetes expert, but you will probably get a good idea of what to look for and how to structure the chaos that Kubernetes seems to be at first.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="show-us-your-support-"><strong>Show us your support 🙏🏻</strong><a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#show-us-your-support-" class="hash-link" aria-label="Direct link to show-us-your-support-" title="Direct link to show-us-your-support-">​</a></h3>
+<p><img loading="lazy" alt="Github Stars" src="https://cyclops-ui.github.io/assets/images/github_stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<p>Before we start, we would love it if you starred our repository and helped us get our tool in front of other developers. Our GitHub repo is here:&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">https://github.com/cyclops-ui/cyclops</a>&nbsp;⭐</p>
+<h1>Components</h1>
+<p>First of all, we can divide a Kubernetes cluster into two parts: <strong>control plane</strong> and <strong>worker nodes</strong>. The control plane takes care of the whole operation and controls the state of our cluster. We’ll get into what that means shortly. On the other side, our worker nodes are essentially just computers listening to what the control plane tells them to do. They are the computing power of our cluster. Any application we run in the cluster will run on those nodes.</p>
+<p>Let’s decompose that further.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="control-plane">Control plane<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#control-plane" class="hash-link" aria-label="Direct link to Control plane" title="Direct link to Control plane">​</a></h2>
+<p><img loading="lazy" alt="Control Plane" src="https://cyclops-ui.github.io/assets/images/control_plane-397b956fed4bf1d337bb8921734969d1.png" width="10475" height="5618" class="img_ev3q"></p>
+<p>As we said, the control plane is making sure our cluster is running as expected. It does that by communicating with the cluster user, scheduling workloads, managing cluster state and so on.</p>
+<p>The control plane is made of four crucial components. Simple by themselves, but together, they create a complex system. These components are:</p>
+<ol>
+<li><strong>1. API</strong></li>
+<li><strong>2. ETCD</strong></li>
+<li><strong>3. Scheduler</strong></li>
+<li><strong>4. Controller Manager</strong></li>
+</ol>
+<p>Control plane components can be run on any machine in the cluster, but are usually run on a separate set of machines, often called <strong>master nodes</strong>. Those machines are not used to run any other container or application and are reserved for the Kubernetes control plane.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="api">API<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#api" class="hash-link" aria-label="Direct link to API" title="Direct link to API">​</a></h3>
+<p>The Kubernetes API acts as the cluster's front-end interface, allowing users to interact with the cluster, define desired states, and perform operations such as creating, updating, and deleting resources.</p>
+<p>It is the <strong>only point of contact</strong> we have with the cluster. Also, no other components are talking directly to each other, but all communication is happening <strong>through</strong> the API.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="etcd">ETCD<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#etcd" class="hash-link" aria-label="Direct link to ETCD" title="Direct link to ETCD">​</a></h3>
+<p>ETCD is the API’s <strong>database</strong>; it's as simple as that. When you tell Kubernetes to create a deployment, it gets stored in the ETCD alongside all the other created resources.</p>
+<p>One characteristic of ETCD is that its key-value storage is organized as a filesystem. Another great feature of ETCD is that users can <strong>subscribe</strong> to events and get notified about changes. For example, <em>let me know when a new pod gets created</em>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scheduler">Scheduler<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#scheduler" class="hash-link" aria-label="Direct link to Scheduler" title="Direct link to Scheduler">​</a></h3>
+<p>As the name suggests, the scheduler <strong>decides which node a pod will run on</strong>. It does that by a set of rules you can read in the <a href="https://kubernetes.io/docs/home/" target="_blank" rel="noopener noreferrer">Kubernetes documentation</a>. <em>This is what I meant when I said you won't be an expert, but you will know what to google :)</em></p>
+<p>The Scheduler <strong>subscribes</strong> to all newly created pods saved in ETCD, but it can <strong>only</strong> talk with the API to get this update.</p>
+<p>When it catches that a pod has been created, it calculates which worker node to run it on. Once it's made up its mind, <strong>the scheduler doesn't run anything on any machine</strong>; it just tells the API to run the pod on a particular node.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="controller-manager">Controller Manager<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#controller-manager" class="hash-link" aria-label="Direct link to Controller Manager" title="Direct link to Controller Manager">​</a></h3>
+<p>The last component from the control plane is the controller manager. We can take it as a thermostat for our cluster. Its job is to shift the current state of the cluster to the desired state.</p>
+<p>This means that it will <strong>create all the needed resources</strong> under the hood to satisfy our needs and get our applications up and running.</p>
+<p>It runs multiple controller processes subscribed to changes on the ETCD, compiled into the same binary for easier deployment. Controller managers’ roles and what those controllers do will be defined more closely later in the blog.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="worker-nodes">Worker nodes<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#worker-nodes" class="hash-link" aria-label="Direct link to Worker nodes" title="Direct link to Worker nodes">​</a></h2>
+<p><img loading="lazy" alt="Worker nodes" src="https://cyclops-ui.github.io/assets/images/nodes-3cf456eb1b4d1b27a9a1210fd0a4cbdb.png" width="10475" height="5618" class="img_ev3q"></p>
+<p>Now that we have concluded what manages the whole cluster, let's dive into where our containers are running and how that is achieved.</p>
+<p>There are 3 components running on each node in a Kubernetes cluster. Of course, you can have multiple nodes in a cluster, but each needs these three components to host your applications.</p>
+<p>Those being:</p>
+<ol>
+<li><strong>1. container runtime</strong></li>
+<li><strong>2. kubelet</strong></li>
+<li><strong>3. kube proxy</strong></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="container-runtime">Container runtime<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#container-runtime" class="hash-link" aria-label="Direct link to Container runtime" title="Direct link to Container runtime">​</a></h3>
+<p>The component that allows Kubernetes to run containers and manages the lifecycle of a container on a node is the container runtime.</p>
+<p>Multiple container runtimes are supported, like <a href="https://containerd.io/" target="_blank" rel="noopener noreferrer">conatinerd</a>, <a href="https://cri-o.io/" target="_blank" rel="noopener noreferrer">cri-o</a>, or other <a href="https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md" target="_blank" rel="noopener noreferrer">CRI compliant runtimes</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kubelet">Kubelet<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#kubelet" class="hash-link" aria-label="Direct link to Kubelet" title="Direct link to Kubelet">​</a></h3>
+<p>Another component subscribed to pod events is Kubelet. Each time a pod is scheduled on a node, the Kubelet running on that node will hear that and start all defined containers. On top of that, Kubelet also performs health checks to ensure everything is running as expected.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="kube-proxy">Kube proxy<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#kube-proxy" class="hash-link" aria-label="Direct link to Kube proxy" title="Direct link to Kube proxy">​</a></h3>
+<p>KubeProxy in Kubernetes manages network connectivity between pods across the cluster, handling tasks like load balancing and network routing. It ensures seamless communication among pods by maintaining network rules and translating service abstractions into actionable network policies.</p>
+<h1>From a deployment to a running container</h1>
+<p>Now that we have listed all of the components and their role in a Kubernetes cluster, let's tell a story on how a Kubernetes Deployment becomes a set of containers running on various machines across the cluster.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pods-replicasets-and-deployments">Pods, Replicasets and Deployments<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#pods-replicasets-and-deployments" class="hash-link" aria-label="Direct link to Pods, Replicasets and Deployments" title="Direct link to Pods, Replicasets and Deployments">​</a></h2>
+<p>Just a quick reminder on the relation of these three: Pods, Replicasets, and Deployments.</p>
+<p><img loading="lazy" alt="Deployment components" src="https://cyclops-ui.github.io/assets/images/deployment_components-3102cf8d2b9f969146abd9838a4fc111.png" width="10020" height="5545" class="img_ev3q"></p>
+<p>The smallest unit we can deploy in a Kubernetes cluster is a <strong>pod</strong>. With it, we are going to define our containers.</p>
+<p>Most likely, we will need a couple of instances of the same application, and we can define how to replicate our pods with a <strong>Replicaset</strong>. It will ensure that we have the desired number of pods running by starting and terminating them.</p>
+<p>Cool, now we have our application replicated, but we would like to roll out a new version of our application. We have to tear down existing Pods/Replicaset and create new ones. A Deployment will automate this process, allowing us to roll out our feature safely.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-prestige">The Prestige<a href="https://cyclops-ui.github.io/blog/2023/12/18/k8s-cluster-components#the-prestige" class="hash-link" aria-label="Direct link to The Prestige" title="Direct link to The Prestige">​</a></h2>
+<p><img loading="lazy" alt="Prestige" src="https://cyclops-ui.github.io/assets/images/prestige_gif-8109b97990185c464e119132f5dfaba6.gif" width="500" height="250" class="img_ev3q"></p>
+<p>Now that we have all our terminology and touched on all Kubernetes components and their role, let's see what happens when we “apply” a Deployment to a Kubernetes cluster.</p>
+<p>Let's say that we have created a <code>deployment.yaml</code> file defining our application (you can see how to do that <a href="https://imgur.com/7qKp189" target="_blank" rel="noopener noreferrer">here</a>) and ran <code>kubectl apply -f deployment.yaml</code>. <code>kubectl</code> will now submit our deployment definition to our cluster's <strong>only point of contact</strong> - the Kubernetes API.</p>
+<p>Our simple API will store our deployment in the ETCD database. Each time a Deployment object is saved into ETCD, it will let the API know that there was a change on Deployments and that it should let <strong>everybody who is subscribed</strong> to such an event know about it.</p>
+<p>And there is a component in the control plane that would like to know when a new Deployment spawns, and that's the <strong>Controller Manager</strong>. When it hears about a new Deployment, it will create a new Replicaset based on the Deployment configuration. To make this Replicaset, it will call the API with a create request.</p>
+<p>Creating a Replicaset is much like creating a Deployment. API will receive a Replicaset to create and store into ETCD. This will make ETCD tell the API that somebody created a Replicaset and pass that information to all subscribed components, which is <strong>again</strong> the Controller Manager.</p>
+<p>When the Controller Manager hears about the new Replicaset, it will create all the Pods defined with the Replicaset by, you guessed it, calling the API, which will store all those Pods into ETCD.</p>
+<p><img loading="lazy" alt=" As we said, a lot of things happened, so we decided to create a GIF that might help you understand the whole process under the hood." src="https://cyclops-ui.github.io/assets/images/gif_k8s_final-35a7e2c22ca4a7577e16499b1fae6181.gif" width="1332" height="737" class="img_ev3q"></p>
+<p>As we said, a lot of things happened, so we decided to create a GIF that might help you understand the whole process under the hood.</p>
+<p>Here, we include the Scheduler, which is subscribed to the Pod creation event. Each time it hears about a new Pod, it decides on which node it should be run. The Scheduler is not running the Pod but <strong>only telling the API</strong> which node it chose for it. The API will then save that information.</p>
+<p>Another component listening to Pod events is the Kubelet, a component running on each worker node in the Kubernetes cluster. Each time the API tells the Kubelet that the Scheduler decided to run the Pod on its node, the Kubelet <strong>will start all the containers</strong> defined by the Pod.</p>
+<p>Finally, we turned our configuration into an application running on a machine! It is a lengthy process with many moving parts, but this may be my favorite part.</p>
+<p>Each component takes just a tiny bit of the responsibility of deploying an application, but they solve a pretty complex problem together.</p>
+<h1>Final thoughts</h1>
+<p>Hope this article helped you get a grasp on Kubernetes components and helped you demystify the most popular orchestrator out there. We encourage you to dig around yourself because we enjoyed learning about this.</p>
+<p>One book we recommend to learn about Kubernetes is “Kubernetes in action” by Marko Lukša. It is pretty popular and gives an excellent overview of what is going on under the hood of Kubernetes and how to use it.</p>]]></content>
+        <author>
+            <name>Juraj Karadža</name>
+            <uri>https://github.com/KaradzaJuraj</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Five Kubernetes Development Tools for Efficient Cluster Management]]></title>
         <id>https://cyclops-ui.github.io/blog/2023/12/08/five-kubernetes-tools</id>
