@@ -64,7 +64,7 @@ the ones you are looking for in the sea of resources or filter through the logs 
 its customization with skins and plugins gives you room for additional utility.</p>
 <p><img loading="lazy" alt="K9s UI" src="https://cyclops-ui.github.io/assets/images/k9s-ui-95826c58943d0a2b8628e088c89f5995.png" width="2504" height="1373" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops">Cyclops<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#cyclops" class="hash-link" aria-label="Direct link to Cyclops" title="Direct link to Cyclops">​</a></h2>
-<p>If you are having difficulties fighting with manifest files,<a href="https://cyclops-ui.com/" target="_blank" rel="noopener noreferrer"><strong>Cyclops</strong></a> is the tool for you!
+<p>If you are having difficulties fighting with manifest files, <a href="https://cyclops-ui.com/" target="_blank" rel="noopener noreferrer"><strong>Cyclops</strong></a> is the tool for you!
 Cyclops removes the clutter and complexity when dealing with manifests by transforming them into a structured web-based
 form, eliminating the need for manual configuration and command-line interactions.</p>
 <p>This makes the deployment process <strong>more accessible</strong> to individuals with varying levels of technical expertise.</p>
