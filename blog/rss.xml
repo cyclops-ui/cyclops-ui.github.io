@@ -13,8 +13,9 @@
             <link>https://cyclops-ui.github.io/blog/2024/01/29/OCI-based-registries</link>
             <guid>https://cyclops-ui.github.io/blog/2024/01/29/OCI-based-registries</guid>
             <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[If you are using Kubernetes, there's a fair chance you are using Helm or at least considered to. This article will guide you on how to publish your Helm charts in a less conventional way - using OCI-based registries.]]></description>
-            <content:encoded><![CDATA[<p>If you are using Kubernetes, there's a fair chance you are using Helm or at least considered to. This article will guide you on how to publish your Helm charts in a less conventional way - using OCI-based registries.</p>
+            <description><![CDATA[Docker Ship]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Docker Ship" src="https://cyclops-ui.github.io/assets/images/oci_helm_docker-1bc4366df1aaceb459551a0c53298c70.jpeg" width="1600" height="900" class="img_ev3q"></p>
+<p>If you are using Kubernetes, there's a fair chance you are using Helm or at least considered to. This article will guide you on how to publish your Helm charts in a less conventional way - using OCI-based registries.</p>
 <p>First of all, we will briefly cover what OCI-based registries are and how they can help us, and after some theory, we will create a Helm chart, push it to the OCI registry, and actually deploy something using it.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="show-us-your-support-">Show us your support 🙏🏻<a href="https://cyclops-ui.github.io/blog/2024/01/29/OCI-based-registries#show-us-your-support-" class="hash-link" aria-label="Direct link to Show us your support 🙏🏻" title="Direct link to Show us your support 🙏🏻">​</a></h3>
 <div style="text-align:center"><p><img loading="lazy" alt="ProductHunt Launch" src="https://cyclops-ui.github.io/assets/images/product-hunt-675246984f76522e190a985eed4a6f51.gif" width="480" height="480" class="img_ev3q"></p></div>
