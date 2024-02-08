@@ -4,10 +4,48 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Mon, 29 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 08 Feb 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[How Promoting Open-Source Can Become Problematic]]></title>
+            <link>https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic</link>
+            <guid>https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic</guid>
+            <pubDate>Thu, 08 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[OS-problematic]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="OS-problematic" src="https://cyclops-ui.github.io/assets/images/OS-problematic-22489ac8e5b095439023a7a940b63b4e.jpeg" width="1600" height="912" class="img_ev3q"></p>
+<p>If you have been in the open-source community lately, you know what I am talking about. The story goes something like this: There were loads of videos/blogs/events hyping up open-source contributions, mainly as a good gateway to land your dream software engineering job. And to some extent, it is true.</p>
+<p>However, this trend has also brought a flood of pull requests (PRs) that contribute little to nothing or, worse, add clutter to the codebase.</p>
+<p>And this is why, lately, you can find a wave of blogs and videos on the theme of <em>“Why you should NOT contribute to Open-Source.”</em></p>
+<p>This article will show how bad it can get with the latest surge of unsavory PRs.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="support-us">Support us<a href="https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic#support-us" class="hash-link" aria-label="Direct link to Support us" title="Direct link to Support us">​</a></h2>
+<p><img loading="lazy" alt="GitHub stars" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<p>Before we start, we would love it if you starred our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">open-source repository</a> and help us get our
+tool in front of other developers ⭐ <br>
+(The irony is not lost on us here... 😄)</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="expressjs">ExpressJS<a href="https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic#expressjs" class="hash-link" aria-label="Direct link to ExpressJS" title="Direct link to ExpressJS">​</a></h2>
+<p>The latest drama has happened in the <a href="https://github.com/expressjs/express/pulls?q=is:pr+is:closed" target="_blank" rel="noopener noreferrer">epxressjs GitHub repo</a>. As you can see, there were loads of “<em>Update Readme.md</em>” pull requests.</p>
+<p><img loading="lazy" alt="List of closed PRs" src="https://cyclops-ui.github.io/assets/images/update-readme-82fa6591032ee66e2dc50ef00c0c573e.png" width="1558" height="1778" class="img_ev3q"></p>
+<p>This doesn’t immediately sound bad; perhaps the <em>Readme</em> was riddled with typos? It's a long shot, but let's investigate. Unfortunately, that wasn’t the case. Looking closely at some of these PRs, we will see the drama's root cause.</p>
+<p>So let us take a look…
+<img loading="lazy" alt="PR-hello" src="https://cyclops-ui.github.io/assets/images/PR-hello-7b14ed77f94dfe19b21b728da4dd975b.png" width="2498" height="476" class="img_ev3q"></p>
+<p>Maybe it’s just one bad apple? Well, let’s look at some others…
+<img loading="lazy" alt="PR-hehe" src="https://cyclops-ui.github.io/assets/images/PR-hehe-8758eae697fc1299b6715a6df6b49bf1.png" width="2498" height="510" class="img_ev3q">
+<img loading="lazy" alt="PR-demo-collage" src="https://cyclops-ui.github.io/assets/images/PR-demo-collage-45aa8bb7771ab7c0e7d6aa6737f5d45a.png" width="2494" height="522" class="img_ev3q"></p>
+<p>As you can see, these PRs are not trying to better the project they contribute to. Although somewhat comedic, having lots and lots of such PRs is a nightmare for the project's maintainers.</p>
+<p>And the last one, I think, tells the bigger picture in this story. It seems that lots of these PRs were a learning experience (assuming “<em>Collage”</em> was a mistype of “<em>College”</em>). Although, that is an assumption made in good faith.</p>
+<p>Some of them could have been done as a sort of shortcut for bolstering resumes, which is a far more alarming intent.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-missing-puzzle-piece">The missing puzzle piece<a href="https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic#the-missing-puzzle-piece" class="hash-link" aria-label="Direct link to The missing puzzle piece" title="Direct link to The missing puzzle piece">​</a></h2>
+<p>Newcomers don’t understand that contributing is not all about the code. It is about investing your time in understanding the project and the issues it is trying to solve, being a part of the community and the discussion, and wanting to better the project because you want it to thrive.</p>
+<p>And that is what is praised about open source contributions, the will to learn and the will to help. In the process, you demonstrate that you can be proactive and solve complex issues. That is what employers are really looking for.</p>
+<p>One look at contributions like these, and you can be sure that you will be ignored by potential employers.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-thoughts">Final thoughts<a href="https://cyclops-ui.github.io/blog/2024/02/08/OS-problematic#final-thoughts" class="hash-link" aria-label="Direct link to Final thoughts" title="Direct link to Final thoughts">​</a></h2>
+<p>Now, there were some external actors in the latest PR nightmare that I won’t be naming here because I doubt that they acted with ill intent. It’s the latest buzz, and I am sure that you can find them with a single Google search if you wanted to.</p>
+<p>It’s important to mention that when considering contributing to open-source, start by looking at the projects you already use and are familiar with.</p>
+<p>Alternatively, focus on projects where you have domain expertise, as sharing that knowledge can be a valuable resource for the maintainers.</p>
+<p>Have you had any bad experiences contributing to open-source?</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Coexistence of containers and Helm charts - OCI based registries]]></title>
             <link>https://cyclops-ui.github.io/blog/2024/01/29/OCI-based-registries</link>
