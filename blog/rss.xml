@@ -4,10 +4,75 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Fri, 23 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Kubernetes Through the Developer's Perspective]]></title>
+            <link>https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective</link>
+            <guid>https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective</guid>
+            <pubDate>Tue, 26 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Developers Perspective]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Developers Perspective" src="https://cyclops-ui.github.io/assets/images/devs-perspective-c805d83809429407d00dd6130de0daae.webp" width="1792" height="1024" class="img_ev3q"></p>
+<p>We perceive things by the way we interact with and understand them. To an infrastructure team, Kubernetes is a great way to scale and manage applications, but for a frontend/backend developer, It may seem complicated and stressful.</p>
+<p>Kubernetes introduces many concepts and terminologies (deployments, services, pods…) that take time to grasp and even more time to master. But devs sometimes have to interact with them weekly, if not daily.</p>
+<p>Through our experience and research, we identified the three most common ways in which developers engage with Kubernetes.</p>
+<p>So, what does Kubernetes look like through the lens of a developer?</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-">Support us 🙏<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#support-us-" class="hash-link" aria-label="Direct link to Support us 🙏" title="Direct link to Support us 🙏">​</a></h3>
+<p><img loading="lazy" alt="GitHub stars" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<p>Before we start, we would love it if you starred our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">open-source repository</a> and helped us get our
+tool in front of other developers ⭐</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="touchpoints">Touchpoints<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#touchpoints" class="hash-link" aria-label="Direct link to Touchpoints" title="Direct link to Touchpoints">​</a></h2>
+<p>Depending on the structure and development workflow of the company, developers either do not interact with Kubernetes at all because automated processes and scripts are doing it, or they interact with Kubernetes through three touchpoints:</p>
+<ol>
+<li><strong>1. configuration files of their application</strong></li>
+<li><strong>2. deploying their application in the K8s cluster</strong></li>
+<li><strong>3. monitoring their applications</strong></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-files">Configuration files<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#configuration-files" class="hash-link" aria-label="Direct link to Configuration files" title="Direct link to Configuration files">​</a></h3>
+<p><img loading="lazy" alt="yaml" src="https://cyclops-ui.github.io/assets/images/yaml-a4bf6a98995068feaf049aaa9388eb08.png" width="2952" height="1672" class="img_ev3q"></p>
+<p>Configuration files tell Kubernetes how to handle an application. They are declarative, meaning you write the result you want to see rather than the steps to get there.</p>
+<p>Most commonly written in <a href="https://yaml.org/" target="_blank" rel="noopener noreferrer">YAML</a>, these files are large and complex to read and understand. And being written in YAML comes with its challenges (and <a href="https://noyaml.com/" target="_blank" rel="noopener noreferrer">quirks</a>) since it is an additional programming language that devs need to learn.</p>
+<p>Mistakes in configurations are hard to spot and rectify but are a <strong>BIG</strong> deal. Even if you coded your app perfectly with no bugs whatsoever (hypothetically 😅), a mistake in the config could mean that your app just won't run.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="deploying">Deploying<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#deploying" class="hash-link" aria-label="Direct link to Deploying" title="Direct link to Deploying">​</a></h3>
+<p>Deploying your application is the process of starting your app in the Kubernetes cluster. The native way of doing this is with <code>kubectl</code>.</p>
+<p><a href="https://kubernetes.io/docs/reference/kubectl/" target="_blank" rel="noopener noreferrer"><code>kubectl</code></a> is the <strong>command line tool</strong> for Kubernetes. Being a command line tool/interface is something we should take into consideration. Senior devs should be accustomed to CLIs, but junior devs still might be timid. Getting accustomed to <code>kubectl</code> adds a new layer to the learning curve.</p>
+<p>However, deploying requires more than knowledge of the available commands of <code>kubectl</code>; it also requires an understanding of the context and how it manipulates Kubernetes objects.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring">Monitoring<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#monitoring" class="hash-link" aria-label="Direct link to Monitoring" title="Direct link to Monitoring">​</a></h3>
+<p>Now that our devs have configured and deployed their application, they are done, right? Well, no.
+The application probably has its fair share of bugs and issues, and they are expected to be able to monitor them and fix them when needed.</p>
+<p>Finding out what is wrong with your app inside the Kubernetes cluster is <strong>not straightforward</strong>. Devs need to understand the objects that are in the cluster and how they interact with each other.</p>
+<p>For instance, to fetch your app's logs, you need to know that it is run in a Pod. That Pod is located in a Replica Set, which itself is located inside a Deployment. You must understand these relationships while rummaging through your K8s resources with <code>kubectl</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="developer-platforms">Developer Platforms<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#developer-platforms" class="hash-link" aria-label="Direct link to Developer Platforms" title="Direct link to Developer Platforms">​</a></h2>
+<p>This is just the tip of the iceberg when it comes to Kubernetes. Its complexity drastically elongates onboarding time for new devs, and all the additional steps introduced slow down development cycles.</p>
+<p>Companies usually have a dedicated team to deal with infrastructure and Kubernetes. When developers encounter issues or need help, they turn to these teams. But you can imagine that when dealing with something as complex as Kubernetes, needing help is a common occurrence.</p>
+<p>This is why we are seeing the rise of developer platforms, which reduce friction between developer and infrastructure teams. A good platform makes the development cycle of creating, updating, and deploying as smooth and straightforward as possible.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops---kubernetes-platform-made-for-developers">Cyclops - Kubernetes platform made for developers<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#cyclops---kubernetes-platform-made-for-developers" class="hash-link" aria-label="Direct link to Cyclops - Kubernetes platform made for developers" title="Direct link to Cyclops - Kubernetes platform made for developers">​</a></h3>
+<p><a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">Cyclops</a> is a fantastic open-source developer tool that abstracts Kubernetes's complexities behind a simple graphical user interface. We call it a platform because your infrastructure teams can customize the UI to suit your specific needs and wants.</p>
+<p>So, how does Cyclops solve the issues mentioned above?</p>
+<ol>
+<li>With Cyclops, your developers never directly interact with configuration files. You create a template, which is then rendered for the developers as a form. This avoids the need to learn languages like YAML and has the added benefit of allowing you to add validations to their input, making it harder for developers to make mistakes.</li>
+<li>Once the developers have specified what they need with Cyclops' help, deploying their application is as simple as clicking a button.</li>
+<li>Now that they have deployed their app, Cyclops makes it easy to monitor its state via its user interface. The application's details are easily accessible and include all the resources (and logs) it uses.</li>
+</ol>
+<p>Let's see it in action!</p>
+<p>The installation is just a two-step process, but there are a few <a href="https://cyclops-ui.com/docs/installation/prerequisites" target="_blank" rel="noopener noreferrer">prerequisites</a>, with the main thing being a Kubernetes cluster.</p>
+<p>So once you have your cluster up and running, you can install Cyclops with the command below:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">kubectl apply -f https://raw.githubusercontent.com/cyclops-ui/cyclops/blogs-demo/install/cyclops-install.yaml</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>And once it's successfully installed (which could take a minute or two), you can access it with:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">kubectl port-forward svc/cyclops-ui 3000:3000 -n cyclops</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Cyclops should now be accessible in your browser at&nbsp;<a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">http://localhost:3000</a>.</p>
+<p>Now, by clicking on the <code>Add Module</code> button, you will be taken to this screen:</p>
+<p><img loading="lazy" alt="New Module in Cyclops" src="https://cyclops-ui.github.io/assets/images/cyclops-1-31fb98344a5282bd9038ed4be31c8817.png" width="3024" height="1964" class="img_ev3q"></p>
+<p>We created a default template for you, but this screen is highly customizable (you can try out <a href="https://cyclops-ui.com/docs/installation/demo/new_module" target="_blank" rel="noopener noreferrer">your own Helm charts</a>!). Now, instead of reading and writing YAML, developers can fill out these fields by clicking the save button, and their application will be deployed!</p>
+<p><img loading="lazy" alt="App Overview in Cyclops" src="https://cyclops-ui.github.io/assets/images/cyclops-2-4e2c6ac663dcc60174879eb21a104f3f.png" width="3024" height="1964" class="img_ev3q"></p>
+<p>This next screen represents the detailed view of your newly deployed application. Here, you can see all the specified resources (and easily access the logs 😉). If anything goes wrong, it will be visible here!</p>
+<p>If you wish to change something in the configuration (like adding more replicas of your app), click on the <code>Edit</code> button. You will be taken to a screen similar to the first one, where you can make those changes, again not even knowing that you are dealing with YAML underneath.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wrapping-up">Wrapping up<a href="https://cyclops-ui.github.io/blog/2024/03/26/devs-perspective#wrapping-up" class="hash-link" aria-label="Direct link to Wrapping up" title="Direct link to Wrapping up">​</a></h2>
+<p>We hope this article did a good job of showcasing some of the ways developers are struggling with Kubernetes and a potential solution that you could consider next time you or your devs engage with it.</p>
+<p>If you are running into issues with Kubernetes or have devs who are pestering you with K8s-related questions, consider supporting us by giving us a star on our GitHub <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a> ⭐</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Interested in Contributing to Open Source? Here's What You Need to Know]]></title>
             <link>https://cyclops-ui.github.io/blog/2024/02/23/contributing-to-OS</link>
