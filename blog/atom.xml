@@ -13,7 +13,7 @@
         <link href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry"/>
         <updated>2024-04-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[telescope-cover-image]]></summary>
-        <content type="html"><![CDATA[<p><img loading="lazy" alt="telescope-cover-image" src="https://cyclops-ui.github.io/assets/images/%E2%80%8Etelemetry-cover-50033d4b1433338461d33857f4191492.png" width="1920" height="1080" class="img_ev3q"></p>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="telescope-cover-image" src="https://cyclops-ui.github.io/assets/images/telemetry-cover-50033d4b1433338461d33857f4191492.png" width="1920" height="1080" class="img_ev3q"></p>
 <p>What started as a frustration with not being able to get in touch with our users, quickly developed into a redesign of the flow of our platform.</p>
 <p>My team and I are developing an open-source platform that helps developers deploy and manage their applications in Kubernetes. We have been working hard to expand our user base, and the efforts were starting to show results.</p>
 <p>The rising number of installations was satisfying to see. However, that was the only thing we were able to observe. We wanted to know more. We wanted to know what users are doing with our platform and what they are struggling with.</p>
