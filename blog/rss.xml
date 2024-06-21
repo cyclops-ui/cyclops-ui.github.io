@@ -4,10 +4,41 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Fri, 07 Jun 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 21 Jun 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Why CLIs are STILL important]]></title>
+            <link>https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important</link>
+            <guid>https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important</guid>
+            <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[why-are-clis-important-cover]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="why-are-clis-important-cover" src="https://cyclops-ui.github.io/assets/images/cover-image-16793f15a670bce08a68b873be5081c8.jpeg" width="1920" height="1080" class="img_ev3q"></p>
+<p>Command Line Interfaces (CLIs) seem old-fashioned in the age of graphical user interfaces (GUIs) and touchscreens, but they remain essential tools for developers. You may not realize it, but they are used far more often than you might think. For example, if you use <code>git</code> commands over the terminal, you're likely engaging with a CLI on a daily basis.</p>
+<p>To give you some background, I work on Cyclops, a tool that provides a graphical user interface for developers to configure and deploy their applications in Kubernetes. Given my employment, why would I, of all people, emphasize the importance of command-line interfaces?</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-">Support us 🙏<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#support-us-" class="hash-link" aria-label="Direct link to Support us 🙏" title="Direct link to Support us 🙏">​</a></h3>
+<p>We know that Kubernetes can be difficult. That is why we created Cyclops, a <strong>truly</strong> developer-oriented Kubernetes platform. Abstract the complexities of Kubernetes, and deploy and manage your applications through a UI. Because of its platform nature, the UI itself is highly customizable - you can change it to fit your needs.</p>
+<p>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a>. If you like what you see, consider showing your support by giving us a star ⭐</p>
+<p><img loading="lazy" alt="github-stars" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-clis-">Why CLIs 🤔<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#why-clis-" class="hash-link" aria-label="Direct link to Why CLIs 🤔" title="Direct link to Why CLIs 🤔">​</a></h2>
+<p>Command-line interfaces (CLIs) are <strong>incredibly fast</strong> for getting things done. They let you perform actions with simple, direct commands, which is especially useful for repetitive tasks. For example, you can search for files or oversee the various programs and services running on your computer with just a few commands. However, this speed is only accessible to those who know the necessary commands.</p>
+<p>CLIs also enable fast <strong>remote access</strong> to machines and servers. Using tools like SSH, you can connect to remote systems from anywhere, allowing you to maintain servers that aren’t physically nearby. Plus, because CLIs are lightweight, they use minimal bandwidth, making remote operations more efficient and reliable.</p>
+<p>These are great benefits of having a CLI, but why would Cyclops be interested in developing one? The answer is automation.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="automation-and-cicd-️">Automation and CI/CD ⚙️<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#automation-and-cicd-%EF%B8%8F" class="hash-link" aria-label="Direct link to Automation and CI/CD ⚙️" title="Direct link to Automation and CI/CD ⚙️">​</a></h3>
+<p>When I talk about automation, I mean writing scripts to handle repetitive tasks, ensuring they are done the same way every time, saving a lot of time. You can automate everything from simple file operations to complex deployments. Automations boost efficiency and reduce the chance of human error since the scripts perform tasks consistently every time they run.</p>
+<p>Automation is a standard practice in the software development lifecycle (just think of GitHub actions). <strong>If Cyclops had a CLI, it would allow it to integrate into larger systems for deploying applications, like CI/CD pipelines.</strong></p>
+<p>You could use Cyclops’s UI to make it easier for developers to configure and deploy their applications in Kubernetes clusters, and a CLI would allow you to automate any part of that process.</p>
+<p>For example, once you create a template and publish it on GitHub, GitHub actions could automatically connect the template to your Cyclops instance using our CLI. This would <strong>allow your developers instant access to each new template or even any update the template receives</strong>. More on automation in future blog posts… 😉</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops-cli---cyctl-">Cyclops CLI - <code>cyctl</code> 🔅<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#cyclops-cli---cyctl-" class="hash-link" aria-label="Direct link to cyclops-cli---cyctl-" title="Direct link to cyclops-cli---cyctl-">​</a></h2>
+<p>We didn't want to miss out on the advantages of a CLI, but initially, we struggled to find the time to develop it. However, our community has grown significantly over the past few months, and since we are an open-source project, we began opening issues to kickstart the development of our CLI.</p>
+<p>Thanks to our amazing community, we realized that our CLI was closer to realization than we had thought. And just a couple of days ago, <a href="https://formulae.brew.sh/formula/cyctl#default" target="_blank" rel="noopener noreferrer">Homebrew</a> received a new package - our very own <code>cyctl</code>!</p>
+<p><img loading="lazy" alt="cyctl" src="https://cyclops-ui.github.io/assets/images/cyctl-cccd4ec112d70769d3e8c08c317e0d31.png" width="1256" height="642" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-source-magic-">Open Source Magic ✨<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#open-source-magic-" class="hash-link" aria-label="Direct link to Open Source Magic ✨" title="Direct link to Open Source Magic ✨">​</a></h2>
+<p>We are very proud to say that <code>cyctl</code> is a <strong>community-driven project</strong>. While the Cyclops team has been overseeing every change and reviewing every PR, most of the features have been developed by our contributors!</p>
+<p>If you're excited about making Kubernetes easier for developers and want to contribute to our CLI or any other part of our project, we’d love to have you on board. Come join us on <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">Discord</a> to connect, collaborate, and be a part of something great!</p>
+<p>And if you enjoyed this post, we would be grateful if you could star our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repo</a> ⭐&nbsp;😊</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[The Easiest Way to Get Started with Kubernetes]]></title>
             <link>https://cyclops-ui.github.io/blog/2024/06/07/k8s-easy-start</link>
