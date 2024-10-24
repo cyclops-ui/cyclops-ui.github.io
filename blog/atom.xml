@@ -8,7 +8,7 @@
     <subtitle>Cyclops Blog</subtitle>
     <icon>https://cyclops-ui.github.io/img/logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[5 Internal Developer Platforms you need to know about!]]></title>
+        <title type="html"><![CDATA[5 Internal Developer Platforms You Need to Know About!]]></title>
         <id>https://cyclops-ui.github.io/blog/2024/10/24/five-idps</id>
         <link href="https://cyclops-ui.github.io/blog/2024/10/24/five-idps"/>
         <updated>2024-10-24T00:00:00.000Z</updated>
@@ -38,6 +38,7 @@
 <p><strong>The Platform Orchestrator</strong> is at the core of Humanitec's offerings. It is an engine that enables platform teams to define templates and establish golden paths for their developers. <strong>Resource Definitions</strong> serve as open-source building blocks that tell the Platform Orchestrator how to create/update infrastructure in a particular environment.&nbsp;****</p>
 <p><strong>What makes it special:</strong> Humanitec's platform is highly modular, allowing organizations to build IDPs using its products as a whole or as building blocks in a larger platform. It easily integrates with existing infrastructure-as-code (IaC) setups, making Humanitec great for large teams looking to scale their operations efficiently.</p>
 <p><img loading="lazy" alt="Qovery logo" src="https://cyclops-ui.github.io/assets/images/qovery_logo-e6785f3e33b7ca03dec1cf6632ac4892.png" width="2129" height="656" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="qovery">Qovery<a href="https://cyclops-ui.github.io/blog/2024/10/24/five-idps#qovery" class="hash-link" aria-label="Direct link to Qovery" title="Direct link to Qovery">​</a></h2>
 <blockquote>
 <p><em><strong>DevOps on Autopilot</strong></em></p>
 </blockquote>
