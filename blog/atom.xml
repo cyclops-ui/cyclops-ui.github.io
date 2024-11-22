@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cyclops-ui.github.io/blog</id>
     <title>Cyclops Blog</title>
-    <updated>2024-10-31T00:00:00.000Z</updated>
+    <updated>2024-11-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cyclops-ui.github.io/blog"/>
     <subtitle>Cyclops Blog</subtitle>
     <icon>https://cyclops-ui.github.io/img/logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Cyclops Launch Week #1]]></title>
+        <id>https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1</id>
+        <link href="https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1"/>
+        <updated>2024-11-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[launch-week-teaser]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/teaser-33f18054ab3712994c20de1b067ba572.png" width="5692" height="3200" class="img_ev3q"></p>
+<p><strong>Cyclops is having its very first launch week, starting on November 25th!</strong></p>
+<p>For an entire week, we will be unveiling a feature a day - that's <strong>five features</strong> in total!</p>
+<p>We don't want to spoil the surprise just yet, but if you're as <strong>impatient</strong> as we are, we invite you to join our <strong>Discord session</strong> that is happening on <strong>Monday, November 25th, at 6 pm CET</strong>! We will preview all of the features we plan to reveal throughout the week and host an Ask-Me-Anything session afterward.</p>
+<p>To reserve your spot, visit the <a href="https://discord.gg/MvecUE9y?event=1308173306821742612" target="_blank" rel="noopener noreferrer">event in our Discord</a> server and mark yourself as interested.</p>
+<p><img loading="lazy" alt="discord-event" src="https://cyclops-ui.github.io/assets/images/discord-event-1666f0a4343244aa6d2c5495eef2f284.png" width="1126" height="460" class="img_ev3q"></p>
+<p>Come back here each day to see what we launch, or follow us on <strong><a href="https://x.com/CyclopsUI" target="_blank" rel="noopener noreferrer">X</a> and <a href="https://www.linkedin.com/company/96014689/" target="_blank" rel="noopener noreferrer">LinkedIn</a></strong> to keep up to date and follow the hashtag <strong>#cyclopslaunchweek</strong></p>
+<p><em>To be continued ...</em></p>]]></content>
+        <author>
+            <name>Juraj Karadža</name>
+            <uri>https://github.com/KaradzaJuraj</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Custom AWS Cloud Platforms]]></title>
         <id>https://cyclops-ui.github.io/blog/2024/10/31/custom-aws-cloud-platforms</id>
@@ -1332,46 +1351,6 @@ case, as well as our contact and community info.</p>
         <author>
             <name>Juraj Karadža</name>
             <uri>https://github.com/KaradzaJuraj</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Cyclops utilizes JSON schema to deliver dynamical UI]]></title>
-        <id>https://cyclops-ui.github.io/blog/2023/11/13/JSON-schemas</id>
-        <link href="https://cyclops-ui.github.io/blog/2023/11/13/JSON-schemas"/>
-        <updated>2023-11-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Cyclops turns complicated YAML manifests into simple and structured UIs where developers can click away their Kubernetes application configuration.]]></summary>
-        <content type="html"><![CDATA[<p>Cyclops turns complicated YAML manifests into simple and structured UIs where developers can click away their Kubernetes application configuration.
-”Great! But how does it know how to render this UI? Should I implement a UI form each time I need a new set of fields to configure? I don’t know React! I don’t know frontend!“</p>
-<p>This blog post should cure your anxiety about implementing a UI for each type of application and explain how Cyclops knows what to render so you can deploy to your K8s cluster carefree.</p>
-<p>To better understand how Cyclops renders the UI, we will scratch the surface of Helm, which Cyclops uses as its templating engine.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-bit-about-helm">A bit about Helm<a href="https://cyclops-ui.github.io/blog/2023/11/13/JSON-schemas#a-bit-about-helm" class="hash-link" aria-label="Direct link to A bit about Helm" title="Direct link to A bit about Helm">​</a></h2>
-<p>Helm is a Kubernetes package manager that helps deploy and manage Kubernetes resources by packing them into charts. It also has a templating engine that allows developers to configure their apps depending on the specific values injected into the helm template.</p>
-<p>The usual Helm chart structure is as follows:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">├── Chart.yaml</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">├── templates</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│   ├── deployment.yaml</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">│   └── service.yaml</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">├── values.schema.json</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">└── values.yaml</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<blockquote>
-<p>A few other Helm chart parts are left out on purpose since they are not tangible to the rest of the blog. You can read more about each of those in <a href="https://helm.sh/docs/topics/charts/" target="_blank" rel="noopener noreferrer">Helm’s official documentation</a></p>
-</blockquote>
-<ul>
-<li><code>Chart.yaml</code> - A YAML file containing information about the chart (like name, version…)</li>
-<li><code>templates</code> - A directory of templates that, when combined with values, will generate valid Kubernetes manifest files</li>
-<li><code>values.yaml</code> - The default configuration values for this chart</li>
-<li><code>values.schema.json</code> - A JSON Schema for imposing a structure on the <code>values.yaml</code> file</li>
-</ul>
-<p>When using Helm, you can change your <code>values.yaml</code> however you see fit for your application. The problem is that you can change them <strong>however</strong> you like, which allows you to misconfigure some parts of your application because you misspelled a field or messed up indentation in the <code>values.yaml</code>.</p>
-<p>Here is where <a href="https://json-schema.org/" target="_blank" rel="noopener noreferrer">JSON schema</a> from the <code>values.schema.json</code> comes in. It will define which fields you should set and even to which values (e.g., you can specify that a field called replicas can’t be set to lower than 0). Helm won’t let you render a Kubernetes manifest with values that don’t comply with the schema. There is an example of such schema later in the blog, but you can also check it out on <a href="https://helm.sh/docs/topics/charts/#schema-files" target="_blank" rel="noopener noreferrer">Helms official docs</a></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="helm-values-schema-and-cyclops-ui">Helm values schema and Cyclops UI<a href="https://cyclops-ui.github.io/blog/2023/11/13/JSON-schemas#helm-values-schema-and-cyclops-ui" class="hash-link" aria-label="Direct link to Helm values schema and Cyclops UI" title="Direct link to Helm values schema and Cyclops UI">​</a></h2>
-<p>Now that the schema's purpose in a Helm chart is explained let’s get into how Cyclops uses it.</p>
-<p>Since the primary purpose of the values schema is to describe what the Helm chart needs to render all the Kubernetes resources, we naturally decided to use it for rendering the UI. On the first iterations of Cyclops, we implemented a solution where users can define those fields in the UI, but why reinvent the wheel when Helm already provided a way to specify this?</p>
-<p>Cyclops controller reads the Helm chart and values schema. Then, it recursively traverses through all the fields in the schema and renders the field based on the field specification. It knows how to render a field based on the field type (<code>string</code>, <code>boolean</code>, <code>object</code>, <code>array</code>...), description of the field, field rules (e.g., minimum or maximum value), and many more.</p>
-<p><img loading="lazy" alt="Untitled" src="https://cyclops-ui.github.io/assets/images/JSON-to-UI-bbad50b21fb22fc8fcbeb19b83d053cb.png" width="3280" height="1234" class="img_ev3q"></p>
-<p>Now that the UI is rendered, a user of Cyclops can click through the form and fill in those fields. Thanks to the schema, values entered by a developer will now always conform to the schema since the UI won’t let you specify any fields (e.g., allow you typos in field names) or set the number of replicas to <code>three</code> instead of <code>3</code>. This is an exaggerated example, but you can probably see the point. The UI will take care of validating your input, and you will have clear guidelines on how to configure your service.</p>
-<p>Once values are entered and saved in the UI, they are passed to the Helm templating engine and the templates from the <code>/templates</code> folder. This results in all Kubernetes resources being configured for the needs of each team/developer without getting into specific implementation details of each resource.</p>
-<p><img loading="lazy" alt="Untitled" src="https://cyclops-ui.github.io/assets/images/UI-to-K8s-caa869f6d4e68f2a961c636ef5ccb882.png" width="2392" height="1770" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-thoughts">Final thoughts<a href="https://cyclops-ui.github.io/blog/2023/11/13/JSON-schemas#final-thoughts" class="hash-link" aria-label="Direct link to Final thoughts" title="Direct link to Final thoughts">​</a></h2>
-<p>Hope this blog post helped you understand how the rendering part of Cyclops works and demystified the whole project. We briefly touched on <a href="https://helm.sh/docs/" target="_blank" rel="noopener noreferrer">Helm</a> and <a href="https://json-schema.org/" target="_blank" rel="noopener noreferrer">JSON schema</a>, but both are larger pieces of software that we can't describe in such a short blog post, so we encourage you to check their documentation.</p>]]></content>
-        <author>
-            <name>Petar Cvitanović</name>
-            <uri>https://github.com/petar-cvit</uri>
         </author>
     </entry>
 </feed>
