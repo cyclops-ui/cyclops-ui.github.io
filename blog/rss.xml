@@ -14,14 +14,19 @@
             <guid>https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1</guid>
             <pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[launch-week-teaser]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/teaser-33f18054ab3712994c20de1b067ba572.png" width="5692" height="3200" class="img_ev3q"></p>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/launch-week-1-c4ae68c61f2a197c2ae997b640507c8f.png" width="5692" height="3200" class="img_ev3q"></p>
 <p><strong>Cyclops is having its very first launch week, starting on November 25th!</strong></p>
 <p>For an entire week, we will be unveiling a feature a day - that's <strong>five features</strong> in total!</p>
 <p>We don't want to spoil the surprise just yet, but if you're as <strong>impatient</strong> as we are, we invite you to join our <strong>Discord session</strong> that is happening on <strong>Monday, November 25th, at 6 pm CET</strong>! We will preview all of the features we plan to reveal throughout the week and host an Ask-Me-Anything session afterward.</p>
 <p>To reserve your spot, visit the <a href="https://discord.gg/MvecUE9y?event=1308173306821742612" target="_blank" rel="noopener noreferrer">event in our Discord</a> server and mark yourself as interested.</p>
 <p><img loading="lazy" alt="discord-event" src="https://cyclops-ui.github.io/assets/images/discord-event-1666f0a4343244aa6d2c5495eef2f284.png" width="1126" height="460" class="img_ev3q"></p>
 <p>Come back here each day to see what we launch, or follow us on <strong><a href="https://x.com/CyclopsUI" target="_blank" rel="noopener noreferrer">X</a> and <a href="https://www.linkedin.com/company/96014689/" target="_blank" rel="noopener noreferrer">LinkedIn</a></strong> to keep up to date and follow the hashtag <strong>#cyclopslaunchweek</strong></p>
-<p><em>To be continued ...</em></p>]]></content:encoded>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-helm-releases-">#1 Helm Releases ⚡<a href="https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1#1-helm-releases-" class="hash-link" aria-label="Direct link to #1 Helm Releases ⚡" title="Direct link to #1 Helm Releases ⚡">​</a></h2>
+<p>With the release of this feature, <strong>Cyclops will pick up on any installed Helm releases in your cluster</strong> and showcase them in our <strong>new tab - Helm Releases.</strong></p>
+<p>Besides reviewing all of your installed Helm releases in a cluster, through this tab you can inspect them as well. You can <strong>view all the resources</strong> your Helm release is made up of, <strong>edit the releases</strong> through the UI, and <strong>delete</strong> them.</p>
+<p><img loading="lazy" alt="helm-releases" src="https://cyclops-ui.github.io/assets/images/1-helm-releases-a11f599439f640e8545dae579d15d9d7.png" width="2000" height="1246" class="img_ev3q"></p>
+<p>Although Cyclops Modules are a more powerful way of managing your applications in the cluster, the Helm releases manager offers a good starting point since it does not require you to change your current CI/CD pipelines or workflows. We also found them great for environments with short lifecycles - such as testing or staging clusters!</p>
+<p><em><strong>To be continued ...</strong></em></p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Custom AWS Cloud Platforms]]></title>
