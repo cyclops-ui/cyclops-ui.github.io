@@ -14,7 +14,7 @@
             <guid>https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1</guid>
             <pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[launch-week-teaser]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/launch-week-1-c4ae68c61f2a197c2ae997b640507c8f.png" width="5692" height="3200" class="img_ev3q"></p>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/launch-week-2-d649d4e4be98d76cca8dd37197f47237.png" width="5692" height="3200" class="img_ev3q"></p>
 <p><strong>Cyclops is having its very first launch week, starting on November 25th!</strong></p>
 <p>For an entire week, we will be unveiling a feature a day - that's <strong>five features</strong> in total!</p>
 <p>We don't want to spoil the surprise just yet, but if you're as <strong>impatient</strong> as we are, we invite you to join our <strong>Discord session</strong> that is happening on <strong>Monday, November 25th, at 6 pm CET</strong>! We will preview all of the features we plan to reveal throughout the week and host an Ask-Me-Anything session afterward.</p>
@@ -26,6 +26,12 @@
 <p>Besides reviewing all of your installed Helm releases in a cluster, through this tab you can inspect them as well. You can <strong>view all the resources</strong> your Helm release is made up of, <strong>edit the releases</strong> through the UI, and <strong>delete</strong> them.</p>
 <p><img loading="lazy" alt="helm-releases" src="https://cyclops-ui.github.io/assets/images/1-helm-releases-a11f599439f640e8545dae579d15d9d7.png" width="2000" height="1246" class="img_ev3q"></p>
 <p>Although Cyclops Modules are a more powerful way of managing your applications in the cluster, the Helm releases manager offers a good starting point since it does not require you to change your current CI/CD pipelines or workflows. We also found them great for environments with short lifecycles - such as testing or staging clusters!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-gitops-">#2 GitOps 🦑<a href="https://cyclops-ui.github.io/blog/2024/11/22/launch-week-1#2-gitops-" class="hash-link" aria-label="Direct link to #2 GitOps 🦑" title="Direct link to #2 GitOps 🦑">​</a></h2>
+<p>We know this was a highly requested feature, and we are happy to announce that <strong>Cyclops now supports a GitOps workflow!</strong></p>
+<p>All applications within Cyclops are defined as <strong>CRs</strong> called <strong>Modules</strong>. Each time a Module is created, the <strong>Cyclops controller</strong> picks it up, creates other Kubernetes resources from it, and applies them to the cluster. Since Modules are CRDs, you can define them via the YAML manifest. Those manifests allow you to define everything you need for your application in a single place.</p>
+<p>Since a <strong>Module can be defined through a manifest</strong>, it can be <strong>stored on a</strong> <strong>git repo</strong> and included in your <strong>GitOps workflow</strong>!</p>
+<p>Through the Module manifest, you can also define which values you want to make editable through Cyclops and which values should be handled only with GitOps. For example, the image version should only be handled with GitOps, but you want to enable developers to scale the number of replicas through Cyclops.</p>
+<p><strong>We created a guide</strong> you can follow to get started, check it out <a href="https://github.com/cyclops-ui/gitops-starter" target="_blank" rel="noopener noreferrer">here</a>!</p>
 <p><em><strong>To be continued ...</strong></em></p>]]></content:encoded>
         </item>
         <item>
