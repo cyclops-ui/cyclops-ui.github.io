@@ -1,1 +1,18 @@
-
+apiVersion: v1
+entries:
+  cyclops:
+  - apiVersion: v2
+    appVersion: v0.15.4
+    created: "2024-12-30T17:18:01.363717677Z"
+    description: Cyclops Helm chart
+    digest: 2cd7835882be75b278b98f858256a0cac511147f1ee7eebf31bc1b783e50f2ec
+    home: https://cyclops-ui.com/
+    keywords:
+    - Devops
+    - Kubernetes operator
+    name: cyclops
+    type: application
+    urls:
+    - https://cyclops-ui.github.io/helm/cyclops-0.13.0.tgz
+    version: 0.13.0
+generated: "2024-12-30T17:18:01.363265144Z"
