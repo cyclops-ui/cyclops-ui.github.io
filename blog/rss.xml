@@ -4,10 +4,50 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Thu, 19 Dec 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 23 Jan 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Why we’re betting on Kubernetes (and you should too)]]></title>
+            <link>https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s</link>
+            <guid>https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s</guid>
+            <pubDate>Thu, 23 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Kubernetes casino]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Kubernetes casino" src="https://cyclops-ui.github.io/assets/images/cover-605d271c9a7c0691e9fbb84c730ab6b0.jpg" width="1792" height="1024" class="img_ev3q"></p>
+<p>To start this off, I want to say that I’m not some <em>sketchy</em> betting tips dealer and to be honest, I don’t even watch sports. But I want to share why we’re placing a big bet, a startup-sized bet, on Kubernetes (and we are not the only ones doing it).</p>
+<p>And no, it’s not what you think. We’re not just using Kubernetes as part of our tech stack. It’s not that simple. Our entire startup depends on the success of Kubernetes. We are literally all in, and I want to tell you why we feel comfortable with that decision.</p>
+<p>I have a couple of important points I want to lay down, and I hope they’ll give you a clear picture of why Kubernetes is not just a safe bet for us but an inevitable one.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="its-open-source">It’s Open-Source<a href="https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s#its-open-source" class="hash-link" aria-label="Direct link to It’s Open-Source" title="Direct link to It’s Open-Source">​</a></h2>
+<p>The first thing I need to mention is that <strong>Kubernetes is open-source</strong> and supported by a massive, active community. On GitHub, it boasts over 112K stars.</p>
+<p>Being open-source has cultivated a thriving community around it, and I don’t mean that as a buzzword. There’s an incredible amount of content available - blogs, tutorials and videos. While Kubernetes is famously complex, the wealth of resources online makes it far more approachable.</p>
+<p>But it doesn’t stop at educational content. Kubernetes’ open-source nature has also enabled an <strong>extensive ecosystem of tools</strong>, integrations, and extensions, from Helm charts to advanced monitoring tools like Prometheus. Tools like these emerged to fill the gaps in Kubernetes, moved it towards widespread adoption, and have become almost a core part of it.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="its-battle-tested">It’s Battle-Tested<a href="https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s#its-battle-tested" class="hash-link" aria-label="Direct link to It’s Battle-Tested" title="Direct link to It’s Battle-Tested">​</a></h2>
+<p>The <a href="https://github.com/kubernetes/kubernetes/commit/2c4b3a562ce34cddc3f8218a2c4d11c7310e6d56" target="_blank" rel="noopener noreferrer">first commit</a> of Kubernetes was pushed to GitHub on June 6th, 2014, which was more than <strong>ten years ago.</strong></p>
+<p>Since then, it has seen a massive rise in popularity. Not only can you run Kubernetes on your home lab, but every major cloud provider offers a managed version of Kubernetes. Over the years, it has gained the status of “production-ready” and is now the most popular container orchestrator. In 2021, there were <strong>5.6 million developers that use Kubernetes worldwide</strong>; today, that number is undoubtedly even higher.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="its-the-platform-for-building-platforms">It’s the platform for building platforms<a href="https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s#its-the-platform-for-building-platforms" class="hash-link" aria-label="Direct link to It’s the platform for building platforms" title="Direct link to It’s the platform for building platforms">​</a></h2>
+<blockquote>
+<p><em>“Kubernetes is a platform for building platforms. It’s a better place to start; not the endgame.” ~</em> <a href="https://bsky.app/profile/kelseyhightower.com" target="_blank" rel="noopener noreferrer"><em>Kelsey Hightower</em></a></p>
+</blockquote>
+<p>One of the most fascinating aspects of Kubernetes is that it’s not just a tool for managing containers - <strong>it is an extensible API</strong>.</p>
+<p>The creators and maintainers of Kubernetes have had great foresight when creating the architecture and design patterns for it. Kubernetes allows you to extend its base functionality with your own custom operators and resources.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="apples-">Apples 🍏<a href="https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s#apples-" class="hash-link" aria-label="Direct link to Apples 🍏" title="Direct link to Apples 🍏">​</a></h3>
+<p>Let’s say you want Kubernetes to manage something completely unrelated to containers—like apples. By defining a <strong>Custom Resource Definition (CRD)</strong> for <code>apples</code>, you can “teach” Kubernetes to recognize them as a resource type. Kubernetes is now not only a manager for deployments and pods, but for apples, oranges, or whatever else you want. Once that’s done, you can use native Kubernetes commands to interact with your apples:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">kubectl get apples</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">NAME          AGE</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">green-apple   6s</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>This silly example shows the power of Kubernetes’ extensibility. By defining <code>apples</code> as a custom resource, you make them behave like any native Kubernetes object. This means you can manage them declaratively (e.g., creating or updating their desired state) and enjoy Kubernetes’ core features, like self-healing, scaling, reconciliation loops...</p>
+<p>You can imagine that <strong>instead of apples</strong>, you are <strong>interacting with databases or S3 buckets</strong>. Now, suddenly, you can use Kubernetes to provision infrastructure instead of just managing your applications.</p>
+<p>This is a very powerful concept.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="so-what-are-we-betting">So, what are we betting?<a href="https://cyclops-ui.github.io/blog/2025/01/23/betting-on-k8s#so-what-are-we-betting" class="hash-link" aria-label="Direct link to So, what are we betting?" title="Direct link to So, what are we betting?">​</a></h2>
+<p>At <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">Cyclops</a>, we are creating an open-source framework for building developer platforms on Kubernetes.</p>
+<p>We believe that <strong>Kubernetes is not just a trend - it’s the future of building cloud-based services.</strong> As the ecosystem matures, Kubernetes is quickly becoming the standard for managing and orchestrating workloads in the cloud.</p>
+<p>We’re betting on <strong>Kubernetes becoming the foundation for developer platforms.</strong> More and more companies are interested in building custom developer platforms that empower their teams. These platforms streamline workflows, simplify the development process, and provide tailored tools for their unique needs (learn more about <a href="https://cyclops-ui.com/blog/2024/10/17/platform-engineering" target="_blank" rel="noopener noreferrer">platform engineering</a>).</p>
+<p><strong>We are betting on companies building developer platforms on top of Kubernetes, and we want to help them on this journey.</strong></p>
+<p><em><strong>By the way…</strong></em>
+<em>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our repository. If you like what you see, consider showing your support by giving us a star ⭐</em></p>
+<blockquote>
+<p>⭐&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer"><em><strong>Star Cyclops on GitHub</strong></em></a> ⭐</p>
+</blockquote>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[DevOps vs Platform Engineering]]></title>
             <link>https://cyclops-ui.github.io/blog/2024/12/19/devops-vs-platform</link>
@@ -1092,119 +1132,6 @@ tool in front of other developers ⭐ <br>
 <h1>Any last words?</h1>
 <p>We started from scratch and, in a couple of minutes, deployed an application with our own Helm chart and a custom UI tailored specifically for our application. On top of that, we did it using an OCI-based registry and didn’t go through setting up a Helm repository to serve our chart.</p>
 <p>Hope you had fun throughout the article and found the information and steps we did useful. Thank you for checking out our article!</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[🎀 Five tools to make your K8s experience more enjoyable 🎀]]></title>
-            <link>https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs</link>
-            <guid>https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs</guid>
-            <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Kubernetes Enjoyer]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="Kubernetes Enjoyer" src="https://cyclops-ui.github.io/assets/images/kubernetes_enjojyer-f74fdfff15a9131c5bc1efd6b273e5b6.png" width="900" height="384" class="img_ev3q"></p>
-<p>For the uninitiated, <strong>K8s stands for Kubernetes</strong>, with the number 8 representing the eight letters between <strong>K</strong> and
-<strong>s.</strong> Kubernetes has become pretty much unavoidable in the current tech landscape but remains uninviting because of its
-complexity and steep learning curve.</p>
-<p>The terminal-based interaction has a part to play in this story. If you ever had the privilege of watching a seasoned
-DevOps work his way with a Kubernetes cluster, you might look at him like you would a seasoned martial artist showcasing
-his fighting skills. That is because everything that is done through a terminal always looks more frightening and seems
-like it requires years and years of training. 🥋</p>
-<p>Now the question stands: how can we make such a complex issue (one that even had its name beautified) more enjoyable?
-Well, in the same way we make everything more enjoyable → make it easier and make it prettier! 🎀 And how would you do
-that, you might ask. With a <strong>graphical user interface,</strong> or GUI for short! Let’s take a look at <strong>five tools</strong> that
-provide you with a user interface when dealing with Kubernetes.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="show-us-your-support-">Show us your support 🙏🏻<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#show-us-your-support-" class="hash-link" aria-label="Direct link to Show us your support 🙏🏻" title="Direct link to Show us your support 🙏🏻">​</a></h3>
-<p><img loading="lazy" alt="ProductHunt Launch" src="https://cyclops-ui.github.io/assets/images/product-hunt-675246984f76522e190a985eed4a6f51.gif" width="480" height="480" class="img_ev3q"></p>
-<p>Before we start, we want to mention that we scheduled our
-<a href="https://www.producthunt.com/products/cyclops" target="_blank" rel="noopener noreferrer">first release on Product Hunt</a>! Click the notify me button to be alerted
-when we are out and ready to receive your feedback 🔔</p>
-<p>And we would love it if you starred our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a> and helped us get our tool
-in front of other developers ⭐</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kubernetes-dashboard">Kubernetes Dashboard<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#kubernetes-dashboard" class="hash-link" aria-label="Direct link to Kubernetes Dashboard" title="Direct link to Kubernetes Dashboard">​</a></h2>
-<p>Let's dive into the <strong>quintessential tool for Kubernetes management</strong> –
-<a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener noreferrer"><strong>the Kubernetes Dashboard</strong></a>. Automatically bundled with
-your cluster, it delivers a graphical overview of your Kubernetes environment. You can use it to get an overview of
-applications running on a cluster, deploy containerized applications to a Kubernetes cluster, and manage cluster
-resources.</p>
-<p>The Kubernetes Dashboard not only offers an overview but also helps with troubleshooting. It provides insights into the
-health of Kubernetes resources, spotlighting any operational errors.</p>
-<p>Through it, you can deploy applications as well. You can do it with a manifest that you wrote or through a form that you
-just fill in. However, it's worth noting that the form, while user-friendly, lacks the flexibility for customization
-beyond basic examples.</p>
-<p>While the K8s dashboard is a <strong>jack-of-all-trades</strong>, many find it to be a generalist, lacking in-depth features. This
-limitation encourages us to explore more tools, each designed for specific purposes, and so we embark on our journey
-through the list of tools we’ve explored.</p>
-<p><img loading="lazy" alt="K8s Dashboard" src="https://cyclops-ui.github.io/assets/images/k8s-dashboard-9993e00d22fd6c62b1a3237d6cb01741.png" width="2048" height="1120" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="k9s">K9s<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#k9s" class="hash-link" aria-label="Direct link to K9s" title="Direct link to K9s">​</a></h2>
-<p><a href="https://k9scli.io/" target="_blank" rel="noopener noreferrer"><strong>K9s</strong></a> is your best friend (get it? 🐶) when exploring your cluster via the terminal. It shares commonality with Vim
-for its interaction style using shortcuts and starting commands with<code>:</code> but don’t let that discourage you. K9s keeps a
-vigilant eye on Kubernetes activities, providing <strong>real-time</strong> information and intuitive commands for resource
-interaction.</p>
-<p>It can almost replace the standard <code>kubectl</code> and doesn’t require you to have a “cheat sheet” next to you when
-interacting with Kubernetes. You traverse through your resources just by selecting them and drilling down to the lowest
-level. This allows for easy log extraction and access to its shell.</p>
-<p>K9s gives you the ability to see the manifest of each of your resources and the ability to edit and apply changes. As I
-mentioned, it <strong>almost</strong> replaces the <code>kubectl</code>. One of the differentiators is that you <strong>cannot</strong> deploy new resources
-via the K9s.</p>
-<p>K9s comes with the ability to filter out your resources and search them with the <code>/</code> command, making it easier to locate
-the ones you are looking for in the sea of resources or filter through the logs of a specific pod.</p>
-<p>A nice touch is the list of commands and shortcuts available to you at any given moment at the top of the screen, and
-its customization with skins and plugins gives you room for additional utility.</p>
-<p><img loading="lazy" alt="K9s UI" src="https://cyclops-ui.github.io/assets/images/k9s-ui-95826c58943d0a2b8628e088c89f5995.png" width="2504" height="1373" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops">Cyclops<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#cyclops" class="hash-link" aria-label="Direct link to Cyclops" title="Direct link to Cyclops">​</a></h2>
-<p>If you are having difficulties fighting with manifest files, <a href="https://cyclops-ui.com/" target="_blank" rel="noopener noreferrer"><strong>Cyclops</strong></a> is the tool for you!
-Cyclops removes the clutter and complexity when dealing with manifests by transforming them into a structured web-based
-form, eliminating the need for manual configuration and command-line interactions.</p>
-<p>This makes the deployment process <strong>more accessible</strong> to individuals with varying levels of technical expertise.</p>
-<p>Within the architecture of Cyclops, a central component is the <a href="https://helm.sh/" target="_blank" rel="noopener noreferrer">Helm</a> engine. Helm is very
-popular within the Kubernetes community; chances are you have already run into it. The popularity of Helm plays to
-Cyclops's strength because of its straightforward integration.</p>
-<p><img loading="lazy" alt="Cyclops Form" src="https://cyclops-ui.github.io/assets/images/cyclops-form-f02111db0c12090a41351f21165fa807.png" width="3024" height="1964" class="img_ev3q"></p>
-<p>With Cyclops, you're not boxed into a one-size-fits-all approach. <strong>You can customize the form to suit your unique
-needs.</strong> For instance, a team member can generate a Helm chart, allowing others to define necessary values using
-Cyclops for painless application deployment.</p>
-<p>Once you have declared the wanted state of your application, deploying it is as straightforward as clicking a button.
-Furthermore, once you deploy your application, the wanted state is also easily changeable through Cyclops.</p>
-<p>In Cyclops, every application lays out a detailed list of resources it uses - deployments, services, pods, and others,
-all in plain view. You can easily track their status, helping you quickly spot and fix any hiccups in your application.
-It's like having a clear roadmap to navigate and troubleshoot any issues that pop up.</p>
-<p><img loading="lazy" alt="Cyclops Resources" src="https://cyclops-ui.github.io/assets/images/cyclops-resources-4f9d576524085a671f5907bd9842c1cd.png" width="3024" height="1964" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="devspace">DevSpace<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#devspace" class="hash-link" aria-label="Direct link to DevSpace" title="Direct link to DevSpace">​</a></h2>
-<p>Consider the convenience and time saving of your local server refreshing automatically with every code save, providing
-real-time visualization of your code changes.</p>
-<p>Imagine taking this smooth experience a step further into Kubernetes clusters; <a href="https://www.devspace.sh/" target="_blank" rel="noopener noreferrer"><strong>DevSpace</strong></a>
-makes that possible. With DevSpace, you can <strong>deploy applications in real time</strong> during the coding process, facilitating
-swift iteration.</p>
-<p>DevSpace streamlines the process by automatically applying changes to your K8s cluster without needing the entire image
-building and deployment pipeline. It builds the image locally without pushing it to a registry, although the option to
-automatically push images is available for those who require it during development.</p>
-<p>Moreover, DevSpace features a user interface that, while somewhat limited, offers a quick overview of all pods in your
-cluster. It allows you to <strong>easily access pod logs and even execute commands</strong> directly within them, enhancing your
-development workflow.</p>
-<p>Although I have focused on local development, DevSpace is used for creating workflows as well. All your workflows are
-saved in one file, making it easy to reproduce environments on any machine with a single <code>devspace deploy</code> command.</p>
-<p><img loading="lazy" alt="DevSpace UI" src="https://cyclops-ui.github.io/assets/images/devspace-ui-7c7d482f3663a0c109a553b7b422057f.png" width="2560" height="1440" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="kubevious">Kubevious<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#kubevious" class="hash-link" aria-label="Direct link to Kubevious" title="Direct link to Kubevious">​</a></h2>
-<p>Unlike the other tools mentioned in this post, <a href="https://kubevious.io/" target="_blank" rel="noopener noreferrer"><strong>Kubevious</strong></a> has no way of changing the cluster
-state. It is intended solely as an observability tool, focusing on potential issues in your cluster. It highlights
-potential threats and risks for every resource you may run.</p>
-<p>The graphical views offer insights into containers, networking, exposure, RBAC, and Helm charts for intuitive
-troubleshooting.</p>
-<p>Kubevious has a <strong>rule engine</strong> that helps with the detection and prevention of misconfigurations. It comes with rules
-out of the box, but it allows you to create custom rules as well (for example, “don’t allow images to be on the
-<em>latest</em> tag”).</p>
-<p>It also comes with the cool <strong>time machine</strong> feature that allows users to travel back in time, audit applications, root
-cause outages, and recover manifests, ensuring a complete understanding of cluster history.</p>
-<p>And I have to mention the <strong>full-text</strong> search it provides! You can search for any resource without knowing the specific
-name of it. One great example is searching for any resources that use a specific port by just typing in “<em>port 3000</em>,”
-and Kubevious will find your resource.</p>
-<p><img loading="lazy" alt="Kubevious Dashboard" src="https://cyclops-ui.github.io/assets/images/kubevious-dashboard-4fc7adeebc80aeac7154eda6832e02d7.png" width="2550" height="1398" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="final-thoughts">Final thoughts<a href="https://cyclops-ui.github.io/blog/2024/01/15/five-kubernetes-UIs#final-thoughts" class="hash-link" aria-label="Direct link to Final thoughts" title="Direct link to Final thoughts">​</a></h2>
-<p>In our quest to enhance the Kubernetes experience, we've unwrapped five delightful tools, each offering its unique charm
-to make your journey smoother and more enjoyable.</p>
-<p>These are not the only tools that provide a UI for Kubernetes, but we wanted to shine a spotlight on some, maybe
-lesser-known ones.</p>
-<p>All of these tools are open-source, so give them a go; they're free!</p>
-<p>I want to end this post with a question directed to you, the reader: What are your thoughts on graphical representations
-of Kubernetes? Is it needed, or does <code>kubectl</code> reign supreme?</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
