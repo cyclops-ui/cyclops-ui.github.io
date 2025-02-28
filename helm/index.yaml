@@ -2,8 +2,23 @@ apiVersion: v1
 entries:
   cyclops:
   - apiVersion: v2
+    appVersion: v0.18.0
+    created: "2025-02-28T14:14:12.498464662Z"
+    description: Cyclops Helm chart
+    digest: 420e7b3d6f9a7362643191d9c7f7d3b7121c4fb68bdbf3a42595680ae75af1a4
+    home: https://cyclops-ui.com/
+    icon: https://cyclops-ui.com/img/logo.png
+    keywords:
+    - Devops
+    - Kubernetes operator
+    name: cyclops
+    type: application
+    urls:
+    - https://cyclops-ui.github.io/helm/cyclops-0.14.3.tgz
+    version: 0.14.3
+  - apiVersion: v2
     appVersion: v0.15.4
-    created: "2025-01-14T22:52:24.547667177Z"
+    created: "2025-02-28T14:14:12.497995208Z"
     description: Cyclops Helm chart
     digest: 6ab0ebe3b418fa1f658929f263583a72fc886b939ee62a15ddefb928ad411840
     home: https://cyclops-ui.com/
@@ -18,7 +33,7 @@ entries:
     version: 0.14.2
   - apiVersion: v2
     appVersion: v0.15.4
-    created: "2025-01-14T22:52:24.547208225Z"
+    created: "2025-02-28T14:14:12.497515224Z"
     description: Cyclops Helm chart
     digest: e3ed69045a2607635d9d44908c2d582c9c4835910327de048e29350d854e27f6
     home: https://cyclops-ui.com/
@@ -33,7 +48,7 @@ entries:
     version: 0.14.1
   - apiVersion: v2
     appVersion: v0.15.4
-    created: "2025-01-14T22:52:24.546743723Z"
+    created: "2025-02-28T14:14:12.497043226Z"
     description: Cyclops Helm chart
     digest: f5b62835938665f475dbf0eeaa72a505bbeff48c9959d99f87e5ed4e66b1814e
     home: https://cyclops-ui.com/
@@ -47,7 +62,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: v0.15.4
-    created: "2025-01-14T22:52:24.546265396Z"
+    created: "2025-02-28T14:14:12.496559906Z"
     description: Cyclops Helm chart
     digest: 2cd7835882be75b278b98f858256a0cac511147f1ee7eebf31bc1b783e50f2ec
     home: https://cyclops-ui.com/
@@ -59,4 +74,4 @@ entries:
     urls:
     - https://cyclops-ui.github.io/helm/cyclops-0.13.0.tgz
     version: 0.13.0
-generated: "2025-01-14T22:52:24.545801174Z"
+generated: "2025-02-28T14:14:12.496101353Z"
