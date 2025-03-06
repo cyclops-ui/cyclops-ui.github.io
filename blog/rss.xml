@@ -4,10 +4,61 @@
         <title>Cyclops Blog</title>
         <link>https://cyclops-ui.github.io/blog</link>
         <description>Cyclops Blog</description>
-        <lastBuildDate>Tue, 04 Mar 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Mar 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[How We Took GitOps a Step Further]]></title>
+            <link>https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further</link>
+            <guid>https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further</guid>
+            <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[cyclops-gitops]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="cyclops-gitops" src="https://cyclops-ui.github.io/assets/images/cover-9879da6d15920163ea14d4e505c94d3a.jpeg" width="1792" height="1024" class="img_ev3q"></p>
+<p>GitOps has changed how teams manage infrastructure and deployments, making everything more automated, predictable, and version-controlled. But a question popped up in our mind: <strong>Can we make it better?</strong></p>
+<p>We are in the business of building Internal Developer Platforms (learn more about them <a href="https://cyclops-ui.com/blog/2025/02/13/what-are-dev-platforms" target="_blank" rel="noopener noreferrer">here</a>). One of the core values of IDPs is allowing developers to move as fast as possible with as much safety as possible. However, we realized that the traditional GitOps workflow was creating friction for developers.</p>
+<p>In this post, I’ll give you a brief history lesson of GitOps - how it started, where we find it lacking, and what we did to push it further…</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-"><em>Support us</em> 🙏<a href="https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further#support-us-" class="hash-link" aria-label="Direct link to support-us-" title="Direct link to support-us-">​</a></h3>
+<p><em>We know that Kubernetes can be difficult. That is why we created Cyclops, an open-source framework for building developer platforms on Kubernetes. Abstract the complexities of Kubernetes, and deploy and manage your applications through a customizable UI that you can fit to your needs.</em></p>
+<p><em>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a>. If you like what you see, consider showing your support by giving us a star ⭐</em></p>
+<p><img loading="lazy" alt="star-cyclops-on-github" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<blockquote>
+<p>⭐&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer"><em><strong>Star Cyclops on GitHub</strong></em></a> ⭐</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-gitops">What is GitOps?<a href="https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further#what-is-gitops" class="hash-link" aria-label="Direct link to What is GitOps?" title="Direct link to What is GitOps?">​</a></h2>
+<p>A prerequisite to GitOps was infrastructure as code. Instead of manually accessing machines that acted as your servers and then using CLI commands to start your applications on them, things like Kubernetes, Terraform, and others have evolved. They allowed you to define your <strong>infrastructure as</strong> <strong>code</strong>, which meant that you had a wanted state of your infrastructure written down - like Kubernetes manifests.</p>
+<p>As infrastructure as code grew in popularity, so did the need to collaborate on this code. Slowly but surely, the common best practices used in regular code development were getting adopted in the infrastructure as code space as well.</p>
+<p>This meant using git as a <strong>single source of truth</strong>.</p>
+<p>Using the git version control to see <strong>who</strong> changed <strong>what</strong> and <strong>when</strong>.</p>
+<p>Making <strong>rollback</strong> as easy as <code>git revert</code>.</p>
+<p>Enabling <strong>collaboration</strong> through pull requests and code reviews.</p>
+<p><strong>Automating</strong> code <strong>tests</strong> and <strong>deployment</strong> of infrastructure as code.</p>
+<p>And thus, GitOps was born. In short, your git repository represents the cluster state, and a GitOps operator is constantly working on keeping the cluster state in sync with the state defined in the git repo.</p>
+<blockquote>
+<p><em>Fun fact: There are two methods of deploying with GitOps. The <strong>push method</strong> is where a tool outside the cluster pushes the code into the cluster, and the <strong>pull method</strong> is where a tool inside the cluster pulls the code into it.</em></p>
+</blockquote>
+<p><img loading="lazy" alt="box-of-devops" src="https://cyclops-ui.github.io/assets/images/box-of-devops-a464bd5b681870c7ac8a0a58e09e15ae.png" width="949" height="1024" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-we-took-gitops-a-step-further">How we took GitOps a step further<a href="https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further#how-we-took-gitops-a-step-further" class="hash-link" aria-label="Direct link to How we took GitOps a step further" title="Direct link to How we took GitOps a step further">​</a></h2>
+<p>As I mentioned, a <strong>prerequisite of GitOps is infrastructure as code</strong>. In a typical setup, a company has a repository designated to store infrastructure as code - this can be <strong>Terraform</strong>, <strong>Helm charts</strong>, or even plain <strong>Kubernetes manifests</strong>. Whatever it is, it’s usually under the ownership of a DevOps team.</p>
+<p>However, DevOps engineers aren’t the only ones that need to work with this configuration. While infra as code is great for many reasons, product developers aren’t thrilled about it. Product developers understand their applications, but expressing their need in a new coding language is hard (even if it is as “simple” as YAML).</p>
+<p>And this often is the most painful part of GitOps. <strong>Developers do not understand infrastructure as code</strong> and rely on DevOps engineers to either create the code entirely or have a painful PR and review process. This is neither fun for the developers because they don’t understand what they are doing nor for the DevOps because they are playing help-desk for the developers.</p>
+<p>But this is where we can take GitOps a step further…</p>
+<p><img loading="lazy" alt="kubectl-vs-gitpush" src="https://cyclops-ui.github.io/assets/images/kubectl-vs-gitpush-2f7c969382c73e662361ca91aed29922.jpg" width="500" height="500" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops">Cyclops<a href="https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further#cyclops" class="hash-link" aria-label="Direct link to Cyclops" title="Direct link to Cyclops">​</a></h3>
+<p><strong>Cyclops</strong> is an <strong>open-source</strong> <strong>tool</strong> for building internal developer platforms on Kubernetes. It <strong>enables</strong> <strong>DevOps engineers to create custom UIs</strong> on top of Kubernetes and enable self-service for the rest of the developers. Basically, a DevOps engineer can import their Helm chart, and Cyclops will create a UI based on it.</p>
+<p>From there, developers can use this UI to configure and deploy their applications. Instead of developers having to learn how Helm charts work (infra as code), they can fill out a couple of fields on the UI, have their input validated, and deploy it with a push of a button.</p>
+<p>These fields are created by their DevOps engineers, who have the complete freedom to abstract as much (or as little) of Kubernetes and Helm as they want.</p>
+<p>But the cool thing about it is that Cyclops can either deploy this configuration straight to the cluster or <strong>push the configuration to a Git repository</strong>.</p>
+<p>From there, you can use some other GitOps operator to sync these changes back to the cluster, where Cyclops can then manage the application again. <strong>Any changes done through Cyclops are pushed to git before being applied to the cluster!</strong></p>
+<p>This approach allows you to combine all the benefits of GitOps with the smooth developer experience of a Developer Platform - allowing developers to be fast and independent.</p>
+<p><img loading="lazy" alt="cyclops-working-with-gitops" src="https://cyclops-ui.github.io/assets/images/cyclops-gitops-flow-a215d0ba8ea8bda3739c0611fd1b6dd6.png" width="1920" height="1080" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="learn-more">Learn more<a href="https://cyclops-ui.github.io/blog/2025/03/06/how-we-took-gitops-further#learn-more" class="hash-link" aria-label="Direct link to Learn more" title="Direct link to Learn more">​</a></h2>
+<p><strong>Cyclops</strong> is entirely <strong>open-source</strong>, you can set it up with a single <code>kubectl</code> command, and it comes with a couple of predefined UIs to get you started. You can find a <strong>quick start guide</strong> <strong>on our repository</strong> and, while you are there, consider supporting us by starring our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repo</a>! To replicate the image above, you can learn more about how to set Cyclops up with GitOps <a href="https://cyclops-ui.com/docs/installation/git-write" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>We are also excited to let you know that we are having our second-ever <strong>launch week</strong>! It will run through <strong>10-14 of March</strong> and end with a <strong>Product Hunt launch</strong>! If you are interested in keeping up, join our <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer"><strong>Discord</strong></a> or follow us on <a href="https://www.linkedin.com/posts/petar-cvit_cyclopslaunchweek2-cyclopslaunchweek2-activity-7302683939666599938-Ulg1" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a><strong>,</strong> where we will reveal <strong>a new feature each day</strong> of the week! 🤘</p>
+<blockquote>
+<p>⭐&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer"><em><strong>Star Cyclops on GitHub</strong></em></a> ⭐</p>
+</blockquote>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Cyclops Launch Week #2]]></title>
             <link>https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2</link>
@@ -1044,49 +1095,6 @@ After a couple of seconds ⏳ (depending on the docker image you used in the <co
 <p>Online courses, documentation, and community support also significantly contribute to making Kubernetes more accessible. With the right tools, even small teams can effectively use Kubernetes for their projects.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="thanks-for-reading-">Thanks for reading 🙌<a href="https://cyclops-ui.github.io/blog/2024/05/17/k8s-myths#thanks-for-reading-" class="hash-link" aria-label="Direct link to Thanks for reading 🙌" title="Direct link to Thanks for reading 🙌">​</a></h3>
 <p>I hope this article clarified some common myths about Kubernetes. If you enjoyed the read, consider supporting us by giving us a star on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repo</a>!</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How Telemetry Saved my Open-Source Platform]]></title>
-            <link>https://cyclops-ui.github.io/blog/2024/04/12/telemetry</link>
-            <guid>https://cyclops-ui.github.io/blog/2024/04/12/telemetry</guid>
-            <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[telescope-cover-image]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="telescope-cover-image" src="https://cyclops-ui.github.io/assets/images/telemetry-cover-50033d4b1433338461d33857f4191492.png" width="1920" height="1080" class="img_ev3q"></p>
-<p>What started as a frustration with not being able to get in touch with our users, quickly developed into a redesign of the flow of our platform.</p>
-<p>My team and I are developing an open-source platform that helps developers deploy and manage their applications in Kubernetes. We have been working hard to expand our user base, and the efforts were starting to show results.</p>
-<p>The rising number of installations was satisfying to see. However, that was the only thing we were able to observe. We wanted to know more. We wanted to know what users are doing with our platform and what they are struggling with.</p>
-<p>The following short story could be considered a #building-in-public entry of our startup, but I just found it interesting and wanted to share it with you.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-">Support us 🙏<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#support-us-" class="hash-link" aria-label="Direct link to Support us 🙏" title="Direct link to Support us 🙏">​</a></h3>
-<p>We know that Kubernetes can be difficult. That is why we created Cyclops, a <strong>truly</strong> developer-oriented Kubernetes platform. Abstract the complexities of Kubernetes, and deploy and manage your applications through a UI. Because of its platform nature, the UI itself is highly customizable - you can change it to fit your needs.</p>
-<p><img loading="lazy" alt="github-stars.gif" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
-<p>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a>. If you like what you see, consider showing your support by giving us a star ⭐</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="user-feedback-️">User Feedback 🗣️<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#user-feedback-%EF%B8%8F" class="hash-link" aria-label="Direct link to User Feedback 🗣️" title="Direct link to User Feedback 🗣️">​</a></h2>
-<p>Since the beginning, we have been trying to talk to our users and gather as much feedback as we can. However, that turned out to be sort of a problem. We knew that people were downloading Cyclops; on our DockerHub, we could see the number of pulled images getting larger by the day.</p>
-<p>The problem was that we had no way of contacting our users. <strong>We could only see the number of pulls, not who pulled them.</strong></p>
-<p>In an attempt to get in touch with our users, we created a <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">Discord server</a>. Discord is a great way to keep your community close to you, and because of it, we have a way of getting to know our users.</p>
-<p>So we started talking to them. The feedback wasn’t always constructive…</p>
-<p><img loading="lazy" alt="Unsatisfied User" src="https://cyclops-ui.github.io/assets/images/unsatisfied-user-1ad89c70ea3adfb5fdc1b05498906197.png" width="3024" height="816" class="img_ev3q"></p>
-<p>… but most of it was really positive. However, there is a caveat; a lot of the positive feedback we were getting was from 1-on-1 meetings with our users. In these meetings, we could demonstrate Cyclops's capabilities better than users could on their own. This turned out to be a bigger issue than we thought.</p>
-<p>Recently, we implemented telemetry to better understand how our users utilize Cyclops. As soon as the statistics started to come in, boy, were we surprised.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem-">The Problem ❗<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#the-problem-" class="hash-link" aria-label="Direct link to The Problem ❗" title="Direct link to The Problem ❗">​</a></h2>
-<p>We were really pleased with the number of installations of Cyclops. As it turns out, we were correct in thinking that Cyclops is pretty simple and straightforward to install. But when it came to starting to use it, more than 60% of our users got lost.</p>
-<p>So what was the problem?</p>
-<p>The thing is, when you want to deploy an application to your Kubernetes cluster, you must provide a template in the form of a Helm chart. We have created a few examples of such charts and published them on our <a href="https://github.com/cyclops-ui/templates" target="_blank" rel="noopener noreferrer">open repository</a>. In all our documentation and blogs, we pointed people toward that repository when starting out with Cyclops. However, it seems that it didn’t catch on. <strong>The number of deployed applications was still much lower than the number of started instances of Cyclops.</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-theory-">A Theory 🧑‍🔬<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#a-theory-" class="hash-link" aria-label="Direct link to A Theory 🧑‍🔬" title="Direct link to A Theory 🧑‍🔬">​</a></h2>
-<p>Here is a fun fact for you, dear reader: the majority of online readers spend less than 15 seconds on a web page (<a href="https://time.com/12933/what-you-think-you-know-about-the-web-is-wrong/" target="_blank" rel="noopener noreferrer">source</a>). Knowing this, could it be that most of our users skimmed over the blogs and documentation and missed out on the reference to our template repository?</p>
-<p>We wanted to test this theory. In our last <a href="https://cyclops-ui.com/blog/2024/03/26/devs-perspective" target="_blank" rel="noopener noreferrer">blog</a>, we did another tutorial on Cyclops showcasing its benefits. However, for this specific article, we created a special version of Cyclops. What was so special about this version? <strong>We added a default value for the template when creating new modules.</strong></p>
-<p><img loading="lazy" alt="Small Change" src="https://cyclops-ui.github.io/assets/images/b4-after-becb921e76efc245165eb98452611b70.png" width="3024" height="894" class="img_ev3q"></p>
-<p>After gathering statistics for some time, the results were in.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-results-">The Results 📊<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#the-results-" class="hash-link" aria-label="Direct link to The Results 📊" title="Direct link to The Results 📊">​</a></h2>
-<p>With a simple change, we saw an <strong>improvement</strong> in our users' behavior, they no longer got lost at the very first step of using our platform! However, it wasn’t as big of an improvement as we initially hoped for but it was certainly in the right direction. We asked ourselves how to further improve on this issue. And we think we got it 🙌</p>
-<p>Since our most recent version (v0.3.0), we have reworked the platform's flow. Choosing a template is no longer an <strong>input field</strong> but a <strong>dropdown</strong>. Every instance of Cyclops comes with a couple of premade templates (stored in our <a href="https://github.com/cyclops-ui/templates" target="_blank" rel="noopener noreferrer">templates repository</a>), which you are free to use and abuse. We feel like this will go a long way in showcasing the customizable nature of Cyclops to our users.</p>
-<p><img loading="lazy" alt="v0.3.0" src="https://cyclops-ui.github.io/assets/images/v03-dropdown-1d7cf189b19a238dcac7426404d710a5.png" width="2832" height="1046" class="img_ev3q"></p>
-<p>But an important part of Cyclops is its <strong>ability to use your own templates</strong>, and we weren’t ready to compromise on that! That is why we added a new <code>Templates</code> tab where you can add new templates and manage the existing ones. Once added, your new templates will be shown in the dropdown the next time you find yourself deploying an application.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="credits-">Credits 🦔<a href="https://cyclops-ui.github.io/blog/2024/04/12/telemetry#credits-" class="hash-link" aria-label="Direct link to Credits 🦔" title="Direct link to Credits 🦔">​</a></h2>
-<p>We released v0.3.0 earlier this week, so it is still too early to say how much of an impact it had on our users, but we have high expectations! We might share the statistics once enough time passes, so make sure to follow us to find out!</p>
-<p>It would be a shame not to mention <a href="https://posthog.com/" target="_blank" rel="noopener noreferrer">PostHog</a> as the telemetry provider we are using, since it turned out to be extremely useful. Because it is hard to find people who will talk with you about your product, gathering statistics gave us a much greater insight into our users.</p>
-<p>If you are one of the few readers who gave this article more than the previously mentioned 15 seconds, I hope you found it amusing at least 😁</p>
-<p>If you are interested in contributing to our project, whether through coding or providing feedback, join our <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">Discord community</a> and come talk to us!</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
