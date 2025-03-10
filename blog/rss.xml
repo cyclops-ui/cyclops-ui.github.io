@@ -65,11 +65,18 @@
             <guid>https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2</guid>
             <pubDate>Tue, 04 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[launch-week-teaser]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/lw-teaser-4b59c7f2ee839018e77f97fa62971dcb.png" width="5692" height="3200" class="img_ev3q"></p>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="launch-week-teaser" src="https://cyclops-ui.github.io/assets/images/lw-cover-dc7750dde1fb20863111865a14df880f.png" width="5692" height="3200" class="img_ev3q"></p>
 <p><strong>Cyclops is having its second-ever Launch Week, starting on March 10th!</strong></p>
 <p>Throughout the week, we’ll unveil a new feature of Cyclops every day - <strong>five features in total!</strong></p>
 <p>Features are not the only thing that we will be announcing. Behind the scenes, we have been making friends in the Kubernetes space...</p>
-<p>Come back here each day to see what we launch, or follow us on&nbsp;<a href="https://x.com/CyclopsUI" target="_blank" rel="noopener noreferrer"><strong>X</strong></a>&nbsp;and&nbsp;<a href="https://www.linkedin.com/company/96014689/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a>&nbsp;to keep up to date and follow the hashtag&nbsp;<strong>#cyclopslaunchweek2</strong></p>]]></content:encoded>
+<p>Come back here each day to see what we launch, or follow us on&nbsp;<a href="https://x.com/CyclopsUI" target="_blank" rel="noopener noreferrer"><strong>X</strong></a>&nbsp;and&nbsp;<a href="https://www.linkedin.com/company/96014689/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a>&nbsp;to keep up to date and follow the hashtag&nbsp;<strong>#cyclopslaunchweek2</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-migrating-helm-releases-to-modules️">#1 <strong>Migrating Helm Releases to Modules</strong>♻️<a href="https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2#1-migrating-helm-releases-to-modules%EF%B8%8F" class="hash-link" aria-label="Direct link to 1-migrating-helm-releases-to-modules️" title="Direct link to 1-migrating-helm-releases-to-modules️">​</a></h2>
+<p>Cyclops already picks up on any installed <strong>Helm releases in your cluster.</strong> But when selecting a Helm release, you will notice a new button pop up in the top right corner!</p>
+<p>With the release of this feature, you can easily <strong>migrate your Helm releases to Cyclops’ modules!</strong> (Yes, even in bulk!)</p>
+<p>You will simply need to choose a template for your migration, and voila! Your applications will be migrated to Cyclops modules without even noticing. They won’t be redeployed and will continue running like nothing even happened.</p>
+<p><img loading="lazy" alt="feature-1" src="https://cyclops-ui.github.io/assets/images/day_1-79d4f06d4546bd5cf8b20e43c2722dfe.gif" width="708" height="480" class="img_ev3q"></p>
+<p>But that is not the only news we bring! We are super happy to announce our newly established <strong>partnership with Suse!</strong> You can now find a familiar face in the <strong>Rancher Marketplace</strong> and install Cyclops in one click.</p>
+<p><img loading="lazy" alt="rancher" src="https://cyclops-ui.github.io/assets/images/rancher_mp-c62d8e16121696d3325a0159cf1be5f5.png" width="1920" height="602" class="img_ev3q"></p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[My Love-Hate Relationship with Helm]]></title>
