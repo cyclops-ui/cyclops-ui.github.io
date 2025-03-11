@@ -79,7 +79,20 @@
 <p>You will simply need to choose a template for your migration, and voila! Your applications will be migrated to Cyclops modules without even noticing. They won’t be redeployed and will continue running like nothing even happened.</p>
 <p><img loading="lazy" alt="feature-1" src="https://cyclops-ui.github.io/assets/images/day_1-79d4f06d4546bd5cf8b20e43c2722dfe.gif" width="708" height="480" class="img_ev3q"></p>
 <p>But that is not the only news we bring! We are super happy to announce our newly established <strong>partnership with Suse!</strong> You can now find a familiar face in the <strong>Rancher Marketplace</strong> and install Cyclops in one click.</p>
-<p><img loading="lazy" alt="rancher" src="https://cyclops-ui.github.io/assets/images/rancher_mp-c62d8e16121696d3325a0159cf1be5f5.png" width="1920" height="602" class="img_ev3q"></p>]]></content>
+<p><img loading="lazy" alt="rancher" src="https://cyclops-ui.github.io/assets/images/rancher_mp-c62d8e16121696d3325a0159cf1be5f5.png" width="1920" height="602" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-pushing-modules-to-git-">#2 Pushing Modules to Git ⏫<a href="https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2#2-pushing-modules-to-git-" class="hash-link" aria-label="Direct link to #2 Pushing Modules to Git ⏫" title="Direct link to #2 Pushing Modules to Git ⏫">​</a></h2>
+<p>You now have the flexibility to deploy a Module in two ways:</p>
+<ol>
+<li><strong>Deploy directly to your Kubernetes cluster</strong></li>
+<li><strong>Push the Module manifest to a Git repository</strong></li>
+</ol>
+<p>Simply specify the repository and path where you want to store the configuration, then click <code>Deploy</code>. From there, tools like ArgoCD can take over and deploy the application. Once it's live, Cyclops will automatically detect it and display it in the UI.</p>
+<p>When you edit a Module using this workflow, any changes will be pushed to the Git repository, keeping everything in sync.</p>
+<p>Check out our <a href="https://cyclops-ui.com/docs/installation/git-write" target="_blank" rel="noopener noreferrer">updated documentation</a> for more details.</p>
+<p><img loading="lazy" alt="feature-2" src="https://cyclops-ui.github.io/assets/images/day-2-speed-1b122f0b482267e7e2c2a5beec21ef38.gif" width="708" height="480" class="img_ev3q"></p>
+<p>We are also very excited to announce that now you can <strong>find Cyclops on the</strong> <strong>DigitalOcean marketplace!</strong> To celebrate, we have published a tutorial in collaboration with DigitalOcean on how you can easily create an internal developer platform on their Kubernetes clusters.</p>
+<p>Check it <a href="https://www.digitalocean.com/community/tutorials/build-developer-platform-kubernetes-cyclops" target="_blank" rel="noopener noreferrer">out</a>! 🌊</p>
+<p><img loading="lazy" alt="digital-ocean-cyclops" src="https://cyclops-ui.github.io/assets/images/do-mp-95bb248df990f872a34208b06f447277.png" width="1630" height="515" class="img_ev3q"></p>]]></content>
         <author>
             <name>Juraj Karadža</name>
             <uri>https://github.com/KaradzaJuraj</uri>
