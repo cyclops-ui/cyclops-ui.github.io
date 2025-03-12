@@ -89,7 +89,14 @@
 <p><img loading="lazy" alt="feature-2" src="https://cyclops-ui.github.io/assets/images/day-2-speed-1b122f0b482267e7e2c2a5beec21ef38.gif" width="708" height="480" class="img_ev3q"></p>
 <p>We are also very excited to announce that now you can <strong>find Cyclops on the</strong> <strong>DigitalOcean marketplace!</strong> To celebrate, we have published a tutorial in collaboration with DigitalOcean on how you can easily create an internal developer platform on their Kubernetes clusters.</p>
 <p>Check it <a href="https://www.digitalocean.com/community/tutorials/build-developer-platform-kubernetes-cyclops" target="_blank" rel="noopener noreferrer">out</a>! 🌊</p>
-<p><img loading="lazy" alt="digital-ocean-cyclops" src="https://cyclops-ui.github.io/assets/images/do-mp-95bb248df990f872a34208b06f447277.png" width="1630" height="515" class="img_ev3q"></p>]]></content:encoded>
+<p><img loading="lazy" alt="digital-ocean-cyclops" src="https://cyclops-ui.github.io/assets/images/do-mp-95bb248df990f872a34208b06f447277.png" width="1630" height="515" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-backstage-plugin-">#3 Backstage Plugin <strong>🧩</strong><a href="https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2#3-backstage-plugin-" class="hash-link" aria-label="Direct link to 3-backstage-plugin-" title="Direct link to 3-backstage-plugin-">​</a></h2>
+<p><a href="https://backstage.io/" target="_blank" rel="noopener noreferrer"><strong>Backstage</strong></a> is a framework for building developer portals built and <strong>open-sourced by Spotify</strong>.</p>
+<p>Developer portals built with Backstage allow you to have a centralized catalog of all applications and services running in your system. All of the applications your developers are working on in a company are listed and organized in a single place.</p>
+<p>Another benefit of Backstage is that it centralizes all the tools used for managing software into a single platform, so deployment processes, monitoring, alerting, and so on are all in a single app. This is achieved through Backstage's plugin architecture, <strong>and Cyclops implements its own plugin</strong>.</p>
+<p>With the Cyclops plugin, you can view all of your deployed Cyclops applications and get the <strong>full experience of Cyclops in your Backstage instance</strong>.</p>
+<p>Check our <a href="https://cyclops-ui.com/docs/backstage/modules-plugin" target="_blank" rel="noopener noreferrer">docs</a> on how to set it up for yourself!</p>
+<p><img loading="lazy" alt="feature-3" src="https://cyclops-ui.github.io/assets/images/day-3-27a3105d92c8a49ce126ba3a78ab4e69.gif" width="800" height="480" class="img_ev3q"></p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[My Love-Hate Relationship with Helm]]></title>
