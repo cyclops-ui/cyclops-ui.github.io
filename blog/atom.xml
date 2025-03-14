@@ -164,7 +164,16 @@
 <p>Backstage has a concept of components that represent services and applications in your system so you keep track of your software. In order to allow you to map your components to applications in Cyclops, we released another plugin that is integrated into your component catalog.</p>
 <p>Each of your Backstage components will now have an additional tab showing you your Cyclops application with all the <strong>Kubernetes resources and allowing you to edit, roll back, or delete your application</strong>.</p>
 <p>With this plugin, your software catalog allows your developers to <strong>deploy their applications and manage the whole lifecycle from a single pane of glass</strong>.</p>
-<p><img loading="lazy" alt="feature-4" src="https://cyclops-ui.github.io/assets/images/day-4-9d84e07240049315beec65260b1283e8.gif" width="868" height="480" class="img_ev3q"></p>]]></content>
+<p><img loading="lazy" alt="feature-4" src="https://cyclops-ui.github.io/assets/images/day-4-9d84e07240049315beec65260b1283e8.gif" width="868" height="480" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-dark-theme-">#5 Dark Theme 🌙<a href="https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2#5-dark-theme-" class="hash-link" aria-label="Direct link to #5 Dark Theme 🌙" title="Direct link to #5 Dark Theme 🌙">​</a></h2>
+<p>We heard you - <strong>Dark Mode is here!</strong> Cyclops now comes with a sleek <strong>dark theme</strong> that’s easier on the eyes and perfect for late-night sessions. Simply toggle it in the top right corner and enjoy the new look!</p>
+<p>A small change, but an essential one - because let’s be real, <strong>no developer can live without Dark Mode!</strong> 🌚</p>
+<p><img loading="lazy" alt="feature-4" src="https://cyclops-ui.github.io/assets/images/day-5-ed5c950d097c10f53249a803c4fc1342.gif" width="732" height="480" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="thats-it-for-now">That’s it! For now…<a href="https://cyclops-ui.github.io/blog/2025/03/04/launch-week-2#thats-it-for-now" class="hash-link" aria-label="Direct link to That’s it! For now…" title="Direct link to That’s it! For now…">​</a></h2>
+<p>And that’s a wrap on <strong>Cyclops Launch Week #2</strong>! 🎉</p>
+<p>Five days, five big releases - from better Helm migrations to Git integration, Backstage plugins, and now Dark Mode. But this is just the beginning!</p>
+<p>We’re excited to hear your thoughts, so try out the new features, give us feedback, and stay tuned - we have even bigger things coming soon. 🎵</p>
+<p>Thank you for being a part of ourjourney! If you are interested in keeping up to date, be sure to <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">join our&nbsp;Discord community</a>&nbsp;where we always share the latest news! 👾</p>]]></content>
         <author>
             <name>Juraj Karadža</name>
             <uri>https://github.com/KaradzaJuraj</uri>
