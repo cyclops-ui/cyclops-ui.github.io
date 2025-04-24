@@ -2,11 +2,57 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cyclops-ui.github.io/blog</id>
     <title>Cyclops Blog</title>
-    <updated>2025-04-03T00:00:00.000Z</updated>
+    <updated>2025-04-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cyclops-ui.github.io/blog"/>
     <subtitle>Cyclops Blog</subtitle>
     <icon>https://cyclops-ui.github.io/img/logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[What are Golden Paths in Platform Engineering?]]></title>
+        <id>https://cyclops-ui.github.io/blog/2025/04/24/golden-paths</id>
+        <link href="https://cyclops-ui.github.io/blog/2025/04/24/golden-paths"/>
+        <updated>2025-04-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Golden Paths with Cyclops]]></summary>
+        <content type="html"><![CDATA[<p><img loading="lazy" alt="Golden Paths with Cyclops" src="https://cyclops-ui.github.io/assets/images/cover-67ec933066d96288dd3f0c631aea2061.png" width="1536" height="1024" class="img_ev3q"></p>
+<p>In many companies, the “right way” to do things - like deploying a new service - is often unclear and undocumented. Instead of a clear process, developers end up asking around, getting bounced from teammate to teammate, until they find someone who <em>might</em> know the answer. That someone, usually a DevOps or platform engineer, is frustrated because it’s the third time this week they’ve answered the same question. At scale, this quickly falls apart.</p>
+<p>Netflix uses the term <em>Paved Road</em>, and Spotify uses <em>Golden Path</em>, but in the end, they are the same thing. It is an opinionated guide - a set of tools and tutorials that guide you from idea to production. It helps developers follow the organization’s best practices for building, deploying, securing, and maintaining software.</p>
+<p>Today, golden paths have become the cornerstone of <a href="https://cyclops-ui.com/blog/2024/10/17/platform-engineering" target="_blank" rel="noopener noreferrer">platform engineering</a>. In this blog post, we will explore what a good golden path looks like and show an example of it in the wild!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-">Support us 🙏<a href="https://cyclops-ui.github.io/blog/2025/04/24/golden-paths#support-us-" class="hash-link" aria-label="Direct link to Support us 🙏" title="Direct link to Support us 🙏">​</a></h3>
+<p><em>We know that Kubernetes can be difficult. That is why we created Cyclops, an open-source framework for building developer platforms on Kubernetes. Abstract the complexities of Kubernetes, and deploy and manage your applications through a customizable UI that you can fit to your needs.</em></p>
+<p><em>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a>. If you like what you see, consider showing your support by giving us a star ⭐</em></p>
+<blockquote>
+<p>⭐&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer"><em><strong>Star Cyclops on GitHub</strong></em></a> ⭐</p>
+</blockquote>
+<p><img loading="lazy" alt="star-cyclops-on-github" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-golden-paths">Why Golden Paths?<a href="https://cyclops-ui.github.io/blog/2025/04/24/golden-paths#why-golden-paths" class="hash-link" aria-label="Direct link to Why Golden Paths?" title="Direct link to Why Golden Paths?">​</a></h2>
+<p>Golden paths reduce the mental overhead that developers face. In today’s world, spinning up a new service often means touching infrastructure, figuring out how to set up monitoring, dealing with security concerns, and getting through compliance hoops.</p>
+<p>And picking the right tools for the job is also not remotely easy. A golden path walks you through all that and allows the developer to focus on shipping things rather than figuring out how all the tools and processes work together.</p>
+<p>For developers, this translates into a faster, happier experience. Less time wasted on boilerplate and tribal knowledge. Fewer mistakes. More focus on building features.</p>
+<p>And for organizations trying to scale their DevOps efforts across many teams, golden paths provide a way to extend DevOps capabilities without creating bottlenecks. Everyone moves faster, more safely, and more independently.</p>
+<blockquote>
+<p><em>The term “Golden Path” was originally coined by Spotify, but it has its roots in the science fiction novel - <a href="https://en.wikipedia.org/wiki/Dune_(novel)" target="_blank" rel="noopener noreferrer">Dune</a>, where it represents the only future in which humanity avoids extinction</em> 😬</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-does-a-good-golden-path-look-like">What does a good Golden Path look like?<a href="https://cyclops-ui.github.io/blog/2025/04/24/golden-paths#what-does-a-good-golden-path-look-like" class="hash-link" aria-label="Direct link to What does a good Golden Path look like?" title="Direct link to What does a good Golden Path look like?">​</a></h2>
+<p>No two Golden Paths are identical. Still, most of them are built around a shared set of guiding principles.</p>
+<p>The goal is to reduce the cognitive load for developers (or whoever else the target audience may be). By abstracting unnecessary complexity and offering getting-started documentation, developers can focus on solving problems rather than wrestling with setup.</p>
+<p>A well-designed Golden Path serves a specific purpose. Instead of presenting developers with a buffet of choices, it offers a <strong>single, clear, and opinionated way</strong> to get something done that reflects the best practices of the organization.</p>
+<p>It is important that they are fully <strong>self-serviceable</strong>. Golden Paths should be discoverable and usable by anyone in the organization without needing to file tickets or wait for someone to provision resources manually.</p>
+<p>And finally, golden paths should be optional. However, <strong>if you make</strong> <strong>best practices the most convenient option</strong>, <strong>developers will follow them</strong>.</p>
+<p><img loading="lazy" alt="Drake Golden Paths" src="https://cyclops-ui.github.io/assets/images/drake-meme-8f9617eef412292b100d2dbce65a157d.png" width="1920" height="1080" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="golden-paths-and-internal-developer-platforms">Golden Paths and Internal Developer Platforms<a href="https://cyclops-ui.github.io/blog/2025/04/24/golden-paths#golden-paths-and-internal-developer-platforms" class="hash-link" aria-label="Direct link to Golden Paths and Internal Developer Platforms" title="Direct link to Golden Paths and Internal Developer Platforms">​</a></h2>
+<p>Golden paths are tutorials. Internal developer platforms are golden paths made manifest.</p>
+<p>Netflix has a <a href="https://netflixtechblog.com/the-show-must-go-on-securing-netflix-studios-at-scale-19b801c86479" target="_blank" rel="noopener noreferrer">great example</a> of this. Their teams have to go through a checkbox of security best practices when building services. However, they built their own platform (called Wall-E), which allowed developers to bootstrap new services easily with the best security practices already integrated.</p>
+<p>Their platform, Wall-E, didn’t just tell developers what to do - it <em>did it for them</em>. It made following security best practices the default, not a checklist. A good developer platform bakes the Golden Path into the developer workflow.</p>
+<p>When it comes to implementing an IDP, you have two options: <strong>buy one</strong> off the shelf or <strong>build it yourself</strong> (like Netflix did). Both come with benefits and drawbacks. Buying one can be faster, but you will eventually outgrow it. Building one is preferable, but it takes time and resources.</p>
+<p>However, <strong>building one doesn’t have to be from scratch</strong>. In fact, most top-performing teams leverage a combination of open-source and vendor tools (<a href="https://humanitec.com/whitepapers/devops-benchmarking-study-2023" target="_blank" rel="noopener noreferrer">the data</a>). You can use an open-source tool like <a href="https://cyclops-ui.com/" target="_blank" rel="noopener noreferrer"><strong>Cyclops</strong></a> to get you most of the way there! <strong>Check out how we use your Helm charts to build internal developer platforms in a jiffy</strong>!</p>
+<blockquote>
+<p>⭐&nbsp;<a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer"><em><strong>Star Cyclops on GitHub</strong></em></a> ⭐</p>
+</blockquote>]]></content>
+        <author>
+            <name>Juraj Karadža</name>
+            <uri>https://github.com/KaradzaJuraj</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[From Helm Chart to Developer UI in 5 Minutes]]></title>
         <id>https://cyclops-ui.github.io/blog/2025/04/03/helm-to-idp-in-five</id>
@@ -1192,41 +1238,6 @@ After a couple of seconds ⏳ (depending on the docker image you used in the <co
 <p>While Cyclops is a relatively new project compared to Helm, it is following in its footsteps. Cyclops has already been accepted into the CNCF landscape and has a fast-growing community around it.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="hope-it-helps-">Hope it helps 🙌<a href="https://cyclops-ui.github.io/blog/2024/07/05/what-the-helm#hope-it-helps-" class="hash-link" aria-label="Direct link to Hope it helps 🙌" title="Direct link to Hope it helps 🙌">​</a></h3>
 <p>Thanks for reading the article. I hope you found it useful. If you wish to be a part of the Cyclops community, to contribute with code, content, or even critique, be sure to join our <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">Discord community 🔗</a> and leave a star on the <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repo 🔗</a> ⭐</p>]]></content>
-        <author>
-            <name>Juraj Karadža</name>
-            <uri>https://github.com/KaradzaJuraj</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why CLIs are STILL important]]></title>
-        <id>https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important</id>
-        <link href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important"/>
-        <updated>2024-06-21T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[why-are-clis-important-cover]]></summary>
-        <content type="html"><![CDATA[<p><img loading="lazy" alt="why-are-clis-important-cover" src="https://cyclops-ui.github.io/assets/images/cover-image-16793f15a670bce08a68b873be5081c8.jpeg" width="1920" height="1080" class="img_ev3q"></p>
-<p>Command Line Interfaces (CLIs) seem old-fashioned in the age of graphical user interfaces (GUIs) and touchscreens, but they remain essential tools for developers. You may not realize it, but they are used far more often than you might think. For example, if you use <code>git</code> commands over the terminal, you're likely engaging with a CLI on a daily basis.</p>
-<p>To give you some background, I work on Cyclops, a tool that provides a graphical user interface for developers to configure and deploy their applications in Kubernetes. Given my employment, why would I, of all people, emphasize the importance of command-line interfaces?</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="support-us-">Support us 🙏<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#support-us-" class="hash-link" aria-label="Direct link to Support us 🙏" title="Direct link to Support us 🙏">​</a></h3>
-<p>We know that Kubernetes can be difficult. That is why we created Cyclops, a <strong>truly</strong> developer-oriented Kubernetes platform. Abstract the complexities of Kubernetes, and deploy and manage your applications through a UI. Because of its platform nature, the UI itself is highly customizable - you can change it to fit your needs.</p>
-<p>We're developing Cyclops as an open-source project. If you're keen to give it a try, here's a quick start guide available on our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repository</a>. If you like what you see, consider showing your support by giving us a star ⭐</p>
-<p><img loading="lazy" alt="github-stars" src="https://cyclops-ui.github.io/assets/images/github-stars-1ca0ec90e9bd7695498845c4cad2c579.gif" width="480" height="360" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-clis-">Why CLIs 🤔<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#why-clis-" class="hash-link" aria-label="Direct link to Why CLIs 🤔" title="Direct link to Why CLIs 🤔">​</a></h2>
-<p>Command-line interfaces (CLIs) are <strong>incredibly fast</strong> for getting things done. They let you perform actions with simple, direct commands, which is especially useful for repetitive tasks. For example, you can search for files or oversee the various programs and services running on your computer with just a few commands. However, this speed is only accessible to those who know the necessary commands.</p>
-<p>CLIs also enable fast <strong>remote access</strong> to machines and servers. Using tools like SSH, you can connect to remote systems from anywhere, allowing you to maintain servers that aren’t physically nearby. Plus, because CLIs are lightweight, they use minimal bandwidth, making remote operations more efficient and reliable.</p>
-<p>These are great benefits of having a CLI, but why would Cyclops be interested in developing one? The answer is automation.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="automation-and-cicd-️">Automation and CI/CD ⚙️<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#automation-and-cicd-%EF%B8%8F" class="hash-link" aria-label="Direct link to Automation and CI/CD ⚙️" title="Direct link to Automation and CI/CD ⚙️">​</a></h3>
-<p>When I talk about automation, I mean writing scripts to handle repetitive tasks, ensuring they are done the same way every time, saving a lot of time. You can automate everything from simple file operations to complex deployments. Automations boost efficiency and reduce the chance of human error since the scripts perform tasks consistently every time they run.</p>
-<p>Automation is a standard practice in the software development lifecycle (just think of GitHub actions). <strong>If Cyclops had a CLI, it would allow it to integrate into larger systems for deploying applications, like CI/CD pipelines.</strong></p>
-<p>You could use Cyclops’s UI to make it easier for developers to configure and deploy their applications in Kubernetes clusters, and a CLI would allow you to automate any part of that process.</p>
-<p>For example, once you create a template and publish it on GitHub, GitHub actions could automatically connect the template to your Cyclops instance using our CLI. This would <strong>allow your developers instant access to each new template or even any update the template receives</strong>. More on automation in future blog posts… 😉</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cyclops-cli---cyctl-">Cyclops CLI - <code>cyctl</code> 🔅<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#cyclops-cli---cyctl-" class="hash-link" aria-label="Direct link to cyclops-cli---cyctl-" title="Direct link to cyclops-cli---cyctl-">​</a></h2>
-<p>We didn't want to miss out on the advantages of a CLI, but initially, we struggled to find the time to develop it. However, our community has grown significantly over the past few months, and since we are an open-source project, we began opening issues to kickstart the development of our CLI.</p>
-<p>Thanks to our amazing community, we realized that our CLI was closer to realization than we had thought. And just a couple of days ago, <a href="https://formulae.brew.sh/formula/cyctl#default" target="_blank" rel="noopener noreferrer">Homebrew</a> received a new package - our very own <code>cyctl</code>!</p>
-<p><img loading="lazy" alt="cyctl" src="https://cyclops-ui.github.io/assets/images/cyctl-cccd4ec112d70769d3e8c08c317e0d31.png" width="1256" height="642" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-source-magic-">Open Source Magic ✨<a href="https://cyclops-ui.github.io/blog/2024/06/21/why-cli-important#open-source-magic-" class="hash-link" aria-label="Direct link to Open Source Magic ✨" title="Direct link to Open Source Magic ✨">​</a></h2>
-<p>We are very proud to say that <code>cyctl</code> is a <strong>community-driven project</strong>. While the Cyclops team has been overseeing every change and reviewing every PR, most of the features have been developed by our contributors!</p>
-<p>If you're excited about making Kubernetes easier for developers and want to contribute to our CLI or any other part of our project, we’d love to have you on board. Come join us on <a href="https://discord.com/invite/8ErnK3qDb3" target="_blank" rel="noopener noreferrer">Discord</a> to connect, collaborate, and be a part of something great!</p>
-<p>And if you enjoyed this post, we would be grateful if you could star our <a href="https://github.com/cyclops-ui/cyclops" target="_blank" rel="noopener noreferrer">repo</a> ⭐&nbsp;😊</p>]]></content>
         <author>
             <name>Juraj Karadža</name>
             <uri>https://github.com/KaradzaJuraj</uri>
